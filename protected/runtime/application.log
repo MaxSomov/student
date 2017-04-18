@@ -1,0 +1,2048 @@
+2017/04/11 11:25:49 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "USER". in /home/max/server/student/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/max/server/student/framework/web/CWebApplication.php(141): CWebApplication->runController('USER')
+#1 /home/max/server/student/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /home/max/server/student/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php?r=USER
+---
+2017/04/11 11:30:18 [warning] [application] Failed to set unsafe attribute "info" of "User".
+in /home/max/server/student/protected/controllers/UserController.php (72)
+in /home/max/server/student/index.php (13)
+2017/04/11 11:30:18 [warning] [application] Failed to set unsafe attribute "image" of "User".
+in /home/max/server/student/protected/controllers/UserController.php (72)
+in /home/max/server/student/index.php (13)
+2017/04/11 12:07:10 [error] [exception.CHttpException.404] CHttpException: The system is unable to find the requested action "delete". in /home/max/server/student/framework/web/CController.php:483
+Stack trace:
+#0 /home/max/server/student/framework/web/CController.php(270): CController->missingAction('delete')
+#1 /home/max/server/student/framework/web/CWebApplication.php(282): CController->run('delete')
+#2 /home/max/server/student/framework/web/CWebApplication.php(141): CWebApplication->runController('user/delete')
+#3 /home/max/server/student/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#4 /home/max/server/student/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php?r=user/delete&id=2
+HTTP_REFERER=http://student/index.php?r=user/view&id=2
+---
+2017/04/11 12:28:34 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'desc' at line 1. The SQL statement executed was: SELECT * FROM `post` `t` ORDER BY desc.
+in /home/max/server/student/protected/controllers/PostController.php (53)
+in /home/max/server/student/index.php (13)
+2017/04/11 12:28:34 [error] [exception.CDbException] CDbException: CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'desc' at line 1. The SQL statement executed was: SELECT * FROM `post` `t` ORDER BY desc in /home/max/server/student/framework/db/CDbCommand.php:543
+Stack trace:
+#0 /home/max/server/student/framework/db/CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 /home/max/server/student/framework/db/ar/CActiveRecord.php(1356): CDbCommand->queryAll()
+#2 /home/max/server/student/framework/db/ar/CActiveRecord.php(1475): CActiveRecord->query(Object(CDbCriteria), true)
+#3 /home/max/server/student/protected/controllers/PostController.php(53): CActiveRecord->findAll(Array)
+#4 /home/max/server/student/framework/web/actions/CInlineAction.php(49): PostController->actionIndex()
+#5 /home/max/server/student/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#6 /home/max/server/student/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#7 /home/max/server/student/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#8 /home/max/server/student/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#9 /home/max/server/student/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#10 /home/max/server/student/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#11 /home/max/server/student/framework/web/CController.php(291): CFilterChain->run()
+#12 /home/max/server/student/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /home/max/server/student/framework/web/CWebApplication.php(282): CController->run('index')
+#14 /home/max/server/student/framework/web/CWebApplication.php(141): CWebApplication->runController('post/index')
+#15 /home/max/server/student/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#16 /home/max/server/student/index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/index.php?r=post/index
+HTTP_REFERER=http://student/index.php?r=subject/view&id=1
+---
+2017/04/11 14:29:52 [error] [php] Trying to get property of non-object (/home/max/server/student/protected/modules/lk/views/default/index.php:5)
+Stack trace:
+#0 /home/max/server/student/framework/web/CController.php(869): DefaultController->renderFile()
+#1 /home/max/server/student/framework/web/CController.php(782): DefaultController->renderPartial()
+#2 /home/max/server/student/protected/modules/lk/controllers/DefaultController.php(11): DefaultController->render()
+#3 /home/max/server/student/framework/web/actions/CInlineAction.php(49): DefaultController->actionIndex()
+#4 /home/max/server/student/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /home/max/server/student/framework/web/CController.php(286): DefaultController->runAction()
+#6 /home/max/server/student/framework/web/CController.php(265): DefaultController->runActionWithFilters()
+#7 /home/max/server/student/framework/web/CWebApplication.php(282): DefaultController->run()
+#8 /home/max/server/student/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /home/max/server/student/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#10 /home/max/server/student/index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php?r=lk
+in /home/max/server/student/protected/modules/lk/views/default/index.php (5)
+in /home/max/server/student/protected/modules/lk/controllers/DefaultController.php (11)
+in /home/max/server/student/index.php (13)
+2017/04/11 14:52:26 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'select subject_id from post where author_id = 2' at line 1. The SQL statement executed was: select * from subject where id = select subject_id from post where author_id = 2.
+in /home/max/server/student/protected/modules/lk/controllers/DefaultController.php (12)
+in /home/max/server/student/index.php (13)
+2017/04/11 14:52:26 [error] [exception.CDbException] CDbException: CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'select subject_id from post where author_id = 2' at line 1. The SQL statement executed was: select * from subject where id = select subject_id from post where author_id = 2 in /home/max/server/student/framework/db/CDbCommand.php:543
+Stack trace:
+#0 /home/max/server/student/framework/db/CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 /home/max/server/student/framework/db/ar/CActiveRecord.php(1586): CDbCommand->queryAll()
+#2 /home/max/server/student/protected/modules/lk/controllers/DefaultController.php(12): CActiveRecord->findAllBySql('select * from s...')
+#3 /home/max/server/student/framework/web/actions/CInlineAction.php(49): DefaultController->actionIndex()
+#4 /home/max/server/student/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /home/max/server/student/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#6 /home/max/server/student/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /home/max/server/student/framework/web/CWebApplication.php(282): CController->run('')
+#8 /home/max/server/student/framework/web/CWebApplication.php(141): CWebApplication->runController('lk')
+#9 /home/max/server/student/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#10 /home/max/server/student/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/index.php?r=lk
+---
+2017/04/11 15:00:31 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'author_id' in 'where clause'. The SQL statement executed was: select * from subject where id in (select subject_id from post where author_id = 2).
+in /home/max/server/student/protected/modules/lk/controllers/DefaultController.php (12)
+in /home/max/server/student/index.php (13)
+2017/04/11 15:00:31 [error] [exception.CDbException] CDbException: CDbCommand failed to execute the SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'author_id' in 'where clause'. The SQL statement executed was: select * from subject where id in (select subject_id from post where author_id = 2) in /home/max/server/student/framework/db/CDbCommand.php:543
+Stack trace:
+#0 /home/max/server/student/framework/db/CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 /home/max/server/student/framework/db/ar/CActiveRecord.php(1586): CDbCommand->queryAll()
+#2 /home/max/server/student/protected/modules/lk/controllers/DefaultController.php(12): CActiveRecord->findAllBySql('select * from s...')
+#3 /home/max/server/student/framework/web/actions/CInlineAction.php(49): DefaultController->actionIndex()
+#4 /home/max/server/student/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /home/max/server/student/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#6 /home/max/server/student/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /home/max/server/student/framework/web/CWebApplication.php(282): CController->run('')
+#8 /home/max/server/student/framework/web/CWebApplication.php(141): CWebApplication->runController('lk')
+#9 /home/max/server/student/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#10 /home/max/server/student/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/index.php?r=lk
+---
+2017/04/11 17:32:21 [error] [exception.CHttpException.404] CHttpException: The requested page does not exist. in /home/max/server/student/protected/controllers/SubjectController.php:73
+Stack trace:
+#0 /home/max/server/student/protected/controllers/SubjectController.php(44): SubjectController->loadModel('2')
+#1 [internal function]: SubjectController->actionView('2')
+#2 /home/max/server/student/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs(Object(SubjectController), Array)
+#3 /home/max/server/student/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(SubjectController), Object(ReflectionMethod), Array)
+#4 /home/max/server/student/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /home/max/server/student/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /home/max/server/student/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /home/max/server/student/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /home/max/server/student/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /home/max/server/student/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /home/max/server/student/framework/web/CController.php(291): CFilterChain->run()
+#11 /home/max/server/student/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /home/max/server/student/framework/web/CWebApplication.php(282): CController->run('view')
+#13 /home/max/server/student/framework/web/CWebApplication.php(141): CWebApplication->runController('subject/view')
+#14 /home/max/server/student/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#15 /home/max/server/student/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php?r=subject/view&id=2
+HTTP_REFERER=http://student/index.php?r=post/index
+---
+2017/04/13 10:10:26 [error] [php] Undefined variable: b (/home/max/server/student/protected/views/post/view.php:35)
+Stack trace:
+#0 /home/max/server/student/framework/web/CController.php(869): PostController->renderFile()
+#1 /home/max/server/student/framework/web/CController.php(782): PostController->renderPartial()
+#2 /home/max/server/student/protected/controllers/PostController.php(56): PostController->render()
+#3 unknown(0): PostController->actionView()
+#4 /home/max/server/student/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs()
+#5 /home/max/server/student/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#6 /home/max/server/student/framework/web/CController.php(308): CInlineAction->runWithParams()
+#7 /home/max/server/student/framework/web/filters/CFilterChain.php(133): PostController->runAction()
+#8 /home/max/server/student/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#9 /home/max/server/student/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#10 /home/max/server/student/framework/web/filters/CInlineFilter.php(58): PostController->filterAccessControl()
+#11 /home/max/server/student/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#12 /home/max/server/student/framework/web/CController.php(291): CFilterChain->run()
+#13 /home/max/server/student/framework/web/CController.php(265): PostController->runActionWithFilters()
+#14 /home/max/server/student/framework/web/CWebApplication.php(282): PostController->run()
+#15 /home/max/server/student/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#16 /home/max/server/student/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#17 /home/max/server/student/index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php?r=post/view&id=2
+in /home/max/server/student/protected/views/post/view.php (35)
+in /home/max/server/student/protected/controllers/PostController.php (56)
+in /home/max/server/student/index.php (13)
+2017/04/13 10:10:44 [error] [php] Undefined variable: b (/home/max/server/student/protected/views/post/view.php:35)
+Stack trace:
+#0 /home/max/server/student/framework/web/CController.php(869): PostController->renderFile()
+#1 /home/max/server/student/framework/web/CController.php(782): PostController->renderPartial()
+#2 /home/max/server/student/protected/controllers/PostController.php(56): PostController->render()
+#3 unknown(0): PostController->actionView()
+#4 /home/max/server/student/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs()
+#5 /home/max/server/student/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#6 /home/max/server/student/framework/web/CController.php(308): CInlineAction->runWithParams()
+#7 /home/max/server/student/framework/web/filters/CFilterChain.php(133): PostController->runAction()
+#8 /home/max/server/student/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#9 /home/max/server/student/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#10 /home/max/server/student/framework/web/filters/CInlineFilter.php(58): PostController->filterAccessControl()
+#11 /home/max/server/student/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#12 /home/max/server/student/framework/web/CController.php(291): CFilterChain->run()
+#13 /home/max/server/student/framework/web/CController.php(265): PostController->runActionWithFilters()
+#14 /home/max/server/student/framework/web/CWebApplication.php(282): PostController->run()
+#15 /home/max/server/student/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#16 /home/max/server/student/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#17 /home/max/server/student/index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php?r=post/view&id=2
+in /home/max/server/student/protected/views/post/view.php (35)
+in /home/max/server/student/protected/controllers/PostController.php (56)
+in /home/max/server/student/index.php (13)
+2017/04/13 10:10:45 [error] [php] Undefined variable: b (/home/max/server/student/protected/views/post/view.php:35)
+Stack trace:
+#0 /home/max/server/student/framework/web/CController.php(869): PostController->renderFile()
+#1 /home/max/server/student/framework/web/CController.php(782): PostController->renderPartial()
+#2 /home/max/server/student/protected/controllers/PostController.php(56): PostController->render()
+#3 unknown(0): PostController->actionView()
+#4 /home/max/server/student/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs()
+#5 /home/max/server/student/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#6 /home/max/server/student/framework/web/CController.php(308): CInlineAction->runWithParams()
+#7 /home/max/server/student/framework/web/filters/CFilterChain.php(133): PostController->runAction()
+#8 /home/max/server/student/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#9 /home/max/server/student/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#10 /home/max/server/student/framework/web/filters/CInlineFilter.php(58): PostController->filterAccessControl()
+#11 /home/max/server/student/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#12 /home/max/server/student/framework/web/CController.php(291): CFilterChain->run()
+#13 /home/max/server/student/framework/web/CController.php(265): PostController->runActionWithFilters()
+#14 /home/max/server/student/framework/web/CWebApplication.php(282): PostController->run()
+#15 /home/max/server/student/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#16 /home/max/server/student/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#17 /home/max/server/student/index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php?r=post/view&id=2
+in /home/max/server/student/protected/views/post/view.php (35)
+in /home/max/server/student/protected/controllers/PostController.php (56)
+in /home/max/server/student/index.php (13)
+2017/04/13 10:11:11 [error] [php] Undefined variable: b (/home/max/server/student/protected/views/post/view.php:35)
+Stack trace:
+#0 /home/max/server/student/framework/web/CController.php(869): PostController->renderFile()
+#1 /home/max/server/student/framework/web/CController.php(782): PostController->renderPartial()
+#2 /home/max/server/student/protected/controllers/PostController.php(56): PostController->render()
+#3 unknown(0): PostController->actionView()
+#4 /home/max/server/student/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs()
+#5 /home/max/server/student/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#6 /home/max/server/student/framework/web/CController.php(308): CInlineAction->runWithParams()
+#7 /home/max/server/student/framework/web/filters/CFilterChain.php(133): PostController->runAction()
+#8 /home/max/server/student/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#9 /home/max/server/student/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#10 /home/max/server/student/framework/web/filters/CInlineFilter.php(58): PostController->filterAccessControl()
+#11 /home/max/server/student/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#12 /home/max/server/student/framework/web/CController.php(291): CFilterChain->run()
+#13 /home/max/server/student/framework/web/CController.php(265): PostController->runActionWithFilters()
+#14 /home/max/server/student/framework/web/CWebApplication.php(282): PostController->run()
+#15 /home/max/server/student/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#16 /home/max/server/student/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#17 /home/max/server/student/index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php?r=post/view&id=2
+in /home/max/server/student/protected/views/post/view.php (35)
+in /home/max/server/student/protected/controllers/PostController.php (56)
+in /home/max/server/student/index.php (13)
+2017/04/13 10:13:46 [error] [exception.CHttpException.400] CHttpException: Your request is invalid. in /home/max/server/student/framework/web/CController.php:336
+Stack trace:
+#0 /home/max/server/student/framework/web/CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 /home/max/server/student/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 /home/max/server/student/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#3 /home/max/server/student/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 /home/max/server/student/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 /home/max/server/student/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 /home/max/server/student/framework/web/CController.php(291): CFilterChain->run()
+#7 /home/max/server/student/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /home/max/server/student/framework/web/CWebApplication.php(282): CController->run('view')
+#9 /home/max/server/student/framework/web/CWebApplication.php(141): CWebApplication->runController('post/view')
+#10 /home/max/server/student/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#11 /home/max/server/student/index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/index.php?r=post/view
+HTTP_REFERER=http://student/index.php?r=post/view&id=2
+---
+2017/04/13 10:55:15 [error] [exception.Error] Error: Call to a member function delete() on null in /home/max/server/student/protected/controllers/PostController.php:111
+Stack trace:
+#0 [internal function]: PostController->actionDeletebookmark('1')
+#1 /home/max/server/student/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs(Object(PostController), Array)
+#2 /home/max/server/student/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(PostController), Object(ReflectionMethod), Array)
+#3 /home/max/server/student/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /home/max/server/student/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#5 /home/max/server/student/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#6 /home/max/server/student/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#7 /home/max/server/student/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 /home/max/server/student/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#9 /home/max/server/student/framework/web/CController.php(291): CFilterChain->run()
+#10 /home/max/server/student/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /home/max/server/student/framework/web/CWebApplication.php(282): CController->run('deletebookmark')
+#12 /home/max/server/student/framework/web/CWebApplication.php(141): CWebApplication->runController('post/deletebook...')
+#13 /home/max/server/student/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#14 /home/max/server/student/index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/index.php?r=post/deletebookmark&id=1
+HTTP_REFERER=http://student/index.php?r=post/view&id=1
+---
+2017/04/13 10:56:46 [error] [exception.CHttpException.400] CHttpException: Your request is invalid. in /home/max/server/student/framework/web/CController.php:336
+Stack trace:
+#0 /home/max/server/student/framework/web/CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 /home/max/server/student/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 /home/max/server/student/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#3 /home/max/server/student/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 /home/max/server/student/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 /home/max/server/student/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 /home/max/server/student/framework/web/CController.php(291): CFilterChain->run()
+#7 /home/max/server/student/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /home/max/server/student/framework/web/CWebApplication.php(282): CController->run('view')
+#9 /home/max/server/student/framework/web/CWebApplication.php(141): CWebApplication->runController('post/view')
+#10 /home/max/server/student/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#11 /home/max/server/student/index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/index.php?r=post/view
+HTTP_REFERER=http://student/index.php?r=post/view&id=1
+---
+2017/04/13 10:57:15 [error] [exception.CHttpException.400] CHttpException: Your request is invalid. in /home/max/server/student/framework/web/CController.php:336
+Stack trace:
+#0 /home/max/server/student/framework/web/CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 /home/max/server/student/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 /home/max/server/student/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#3 /home/max/server/student/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 /home/max/server/student/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 /home/max/server/student/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 /home/max/server/student/framework/web/CController.php(291): CFilterChain->run()
+#7 /home/max/server/student/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /home/max/server/student/framework/web/CWebApplication.php(282): CController->run('view')
+#9 /home/max/server/student/framework/web/CWebApplication.php(141): CWebApplication->runController('post/view')
+#10 /home/max/server/student/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#11 /home/max/server/student/index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/index.php?r=post/view
+HTTP_REFERER=http://student/index.php?r=post/view&id=1
+---
+2017/04/13 11:46:32 [error] [exception.CException] CException: Property "User.raing" is not defined. in /home/max/server/student/framework/base/CComponent.php:130
+Stack trace:
+#0 /home/max/server/student/framework/db/ar/CActiveRecord.php(145): CComponent->__get('raing')
+#1 /home/max/server/student/protected/controllers/PostController.php(131): CActiveRecord->__get('raing')
+#2 [internal function]: PostController->actionRatingplus('1')
+#3 /home/max/server/student/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs(Object(PostController), Array)
+#4 /home/max/server/student/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(PostController), Object(ReflectionMethod), Array)
+#5 /home/max/server/student/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#6 /home/max/server/student/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#7 /home/max/server/student/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#8 /home/max/server/student/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#9 /home/max/server/student/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#10 /home/max/server/student/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#11 /home/max/server/student/framework/web/CController.php(291): CFilterChain->run()
+#12 /home/max/server/student/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /home/max/server/student/framework/web/CWebApplication.php(282): CController->run('ratingplus')
+#14 /home/max/server/student/framework/web/CWebApplication.php(141): CWebApplication->runController('post/ratingplus')
+#15 /home/max/server/student/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#16 /home/max/server/student/index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/index.php?r=post/ratingplus&id=1
+HTTP_REFERER=http://student/index.php?r=post/view&id=1
+---
+2017/04/13 15:02:43 [warning] [application] Failed to set unsafe attribute "info" of "User".
+in /home/max/server/student/protected/controllers/UserController.php (61)
+in /home/max/server/student/index.php (13)
+2017/04/13 15:02:43 [warning] [application] Failed to set unsafe attribute "image" of "User".
+in /home/max/server/student/protected/controllers/UserController.php (61)
+in /home/max/server/student/index.php (13)
+2017/04/13 15:10:31 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1. The SQL statement executed was: select * from subject where id in (select subject_id from post where user_id = ).
+in /home/max/server/student/protected/modules/lk/controllers/DefaultController.php (17)
+in /home/max/server/student/index.php (13)
+2017/04/13 15:10:31 [error] [exception.CDbException] CDbException: CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1. The SQL statement executed was: select * from subject where id in (select subject_id from post where user_id = ) in /home/max/server/student/framework/db/CDbCommand.php:543
+Stack trace:
+#0 /home/max/server/student/framework/db/CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 /home/max/server/student/framework/db/ar/CActiveRecord.php(1586): CDbCommand->queryAll()
+#2 /home/max/server/student/protected/modules/lk/controllers/DefaultController.php(17): CActiveRecord->findAllBySql('select * from s...')
+#3 /home/max/server/student/framework/web/actions/CInlineAction.php(49): DefaultController->actionIndex()
+#4 /home/max/server/student/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /home/max/server/student/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#6 /home/max/server/student/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /home/max/server/student/framework/web/CWebApplication.php(282): CController->run('')
+#8 /home/max/server/student/framework/web/CWebApplication.php(141): CWebApplication->runController('lk')
+#9 /home/max/server/student/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#10 /home/max/server/student/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/index.php?r=lk
+---
+2017/04/13 16:18:29 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1. The SQL statement executed was: select * from subject where id in (select subject_id from post where user_id = ).
+in /home/max/server/student/protected/modules/lk/controllers/DefaultController.php (17)
+in /home/max/server/student/index.php (13)
+2017/04/13 16:18:29 [error] [exception.CDbException] CDbException: CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1. The SQL statement executed was: select * from subject where id in (select subject_id from post where user_id = ) in /home/max/server/student/framework/db/CDbCommand.php:543
+Stack trace:
+#0 /home/max/server/student/framework/db/CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 /home/max/server/student/framework/db/ar/CActiveRecord.php(1586): CDbCommand->queryAll()
+#2 /home/max/server/student/protected/modules/lk/controllers/DefaultController.php(17): CActiveRecord->findAllBySql('select * from s...')
+#3 /home/max/server/student/framework/web/actions/CInlineAction.php(49): DefaultController->actionIndex()
+#4 /home/max/server/student/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /home/max/server/student/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#6 /home/max/server/student/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /home/max/server/student/framework/web/CWebApplication.php(282): CController->run('')
+#8 /home/max/server/student/framework/web/CWebApplication.php(141): CWebApplication->runController('lk')
+#9 /home/max/server/student/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#10 /home/max/server/student/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/index.php?r=lk
+---
+2017/04/13 16:34:49 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "subjects/index". in /home/max/server/student/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/max/server/student/framework/web/CWebApplication.php(141): CWebApplication->runController('subjects/index')
+#1 /home/max/server/student/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /home/max/server/student/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php?r=subjects/index
+HTTP_REFERER=http://student/index.php?r=site/index
+---
+2017/04/13 16:35:00 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "subjects/index". in /home/max/server/student/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/max/server/student/framework/web/CWebApplication.php(141): CWebApplication->runController('subjects/index')
+#1 /home/max/server/student/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /home/max/server/student/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php?r=subjects/index
+HTTP_REFERER=http://student/index.php?r=site/index
+---
+2017/04/13 16:35:11 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "index". in /home/max/server/student/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/max/server/student/framework/web/CWebApplication.php(141): CWebApplication->runController('index')
+#1 /home/max/server/student/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /home/max/server/student/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php?r=index
+HTTP_REFERER=http://student/index.php?r=subject/index
+---
+2017/04/13 16:35:29 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "index". in /home/max/server/student/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/max/server/student/framework/web/CWebApplication.php(141): CWebApplication->runController('index')
+#1 /home/max/server/student/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /home/max/server/student/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php?r=index
+HTTP_REFERER=http://student/index.php?r=subject/index
+---
+2017/04/13 16:39:17 [error] [exception.ParseError] ParseError: syntax error, unexpected '?>' in /home/max/server/student/protected/views/layouts/main.php:70
+Stack trace:
+#0 /home/max/server/student/framework/web/CBaseController.php(95): CBaseController->renderInternal('/home/max/serve...', Array, true)
+#1 /home/max/server/student/framework/web/widgets/CContentDecorator.php(76): CBaseController->renderFile('/home/max/serve...', Array, true)
+#2 /home/max/server/student/framework/web/widgets/CContentDecorator.php(54): CContentDecorator->decorate('<div id="conten...')
+#3 /home/max/server/student/framework/web/widgets/COutputProcessor.php(44): CContentDecorator->processOutput('<div id="conten...')
+#4 /home/max/server/student/framework/web/CBaseController.php(214): COutputProcessor->run()
+#5 /home/max/server/student/framework/web/CBaseController.php(308): CBaseController->endWidget('CContentDecorat...')
+#6 /home/max/server/student/protected/views/layouts/column1.php(6): CBaseController->endContent()
+#7 /home/max/server/student/framework/web/CBaseController.php(126): require('/home/max/serve...')
+#8 /home/max/server/student/framework/web/CBaseController.php(95): CBaseController->renderInternal('/home/max/serve...', Array, true)
+#9 /home/max/server/student/framework/web/CController.php(784): CBaseController->renderFile('/home/max/serve...', Array, true)
+#10 /home/max/server/student/protected/controllers/SiteController.php(98): CController->render('login', Array)
+#11 /home/max/server/student/framework/web/actions/CInlineAction.php(49): SiteController->actionLogin()
+#12 /home/max/server/student/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#13 /home/max/server/student/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#14 /home/max/server/student/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 /home/max/server/student/framework/web/CWebApplication.php(282): CController->run('login')
+#16 /home/max/server/student/framework/web/CWebApplication.php(141): CWebApplication->runController('site/login')
+#17 /home/max/server/student/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#18 /home/max/server/student/index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/index.php?r=site/login
+---
+2017/04/13 16:44:59 [error] [exception.CException] CException: Property "CWebUser.username" is not defined. in /home/max/server/student/framework/base/CComponent.php:130
+Stack trace:
+#0 /home/max/server/student/framework/web/auth/CWebUser.php(146): CComponent->__get('username')
+#1 /home/max/server/student/protected/views/layouts/main.php(75): CWebUser->__get('username')
+#2 /home/max/server/student/framework/web/CBaseController.php(126): require('/home/max/serve...')
+#3 /home/max/server/student/framework/web/CBaseController.php(95): CBaseController->renderInternal('/home/max/serve...', Array, true)
+#4 /home/max/server/student/framework/web/widgets/CContentDecorator.php(76): CBaseController->renderFile('/home/max/serve...', Array, true)
+#5 /home/max/server/student/framework/web/widgets/CContentDecorator.php(54): CContentDecorator->decorate('<div id="conten...')
+#6 /home/max/server/student/framework/web/widgets/COutputProcessor.php(44): CContentDecorator->processOutput('<div id="conten...')
+#7 /home/max/server/student/framework/web/CBaseController.php(214): COutputProcessor->run()
+#8 /home/max/server/student/framework/web/CBaseController.php(308): CBaseController->endWidget('CContentDecorat...')
+#9 /home/max/server/student/protected/views/layouts/column1.php(6): CBaseController->endContent()
+#10 /home/max/server/student/framework/web/CBaseController.php(126): require('/home/max/serve...')
+#11 /home/max/server/student/framework/web/CBaseController.php(95): CBaseController->renderInternal('/home/max/serve...', Array, true)
+#12 /home/max/server/student/framework/web/CController.php(784): CBaseController->renderFile('/home/max/serve...', Array, true)
+#13 /home/max/server/student/protected/controllers/SiteController.php(32): CController->render('index')
+#14 /home/max/server/student/framework/web/actions/CInlineAction.php(49): SiteController->actionIndex()
+#15 /home/max/server/student/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#16 /home/max/server/student/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#17 /home/max/server/student/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 /home/max/server/student/framework/web/CWebApplication.php(282): CController->run('')
+#19 /home/max/server/student/framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#20 /home/max/server/student/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#21 /home/max/server/student/index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/index.php
+HTTP_REFERER=http://student/index.php?r=site/login
+---
+2017/04/13 16:49:35 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "lk/index". in /home/max/server/student/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/max/server/student/framework/web/CWebApplication.php(141): CWebApplication->runController('lk/index')
+#1 /home/max/server/student/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /home/max/server/student/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php?r=lk/index
+HTTP_REFERER=http://student/index.php
+---
+2017/04/13 19:28:16 [error] [exception.CException] CException: CWebApplication and its behaviors do not have a method or closure named "createUlr". in /home/max/server/student/framework/base/CComponent.php:266
+Stack trace:
+#0 /home/max/server/student/protected/views/site/login.php(22): CComponent->__call('createUlr', Array)
+#1 /home/max/server/student/framework/web/CBaseController.php(126): require('/home/max/serve...')
+#2 /home/max/server/student/framework/web/CBaseController.php(95): CBaseController->renderInternal('/home/max/serve...', Array, true)
+#3 /home/max/server/student/framework/web/CController.php(869): CBaseController->renderFile('/home/max/serve...', Array, true)
+#4 /home/max/server/student/framework/web/CController.php(782): CController->renderPartial('login', Array, true)
+#5 /home/max/server/student/protected/controllers/SiteController.php(98): CController->render('login', Array)
+#6 /home/max/server/student/framework/web/actions/CInlineAction.php(49): SiteController->actionLogin()
+#7 /home/max/server/student/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#8 /home/max/server/student/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#9 /home/max/server/student/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 /home/max/server/student/framework/web/CWebApplication.php(282): CController->run('login')
+#11 /home/max/server/student/framework/web/CWebApplication.php(141): CWebApplication->runController('site/login')
+#12 /home/max/server/student/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#13 /home/max/server/student/index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/index.php?r=site/login
+HTTP_REFERER=http://student/index.php?r=site/index
+---
+2017/04/13 19:28:28 [error] [exception.CException] CException: CWebApplication and its behaviors do not have a method or closure named "createUlr". in /home/max/server/student/framework/base/CComponent.php:266
+Stack trace:
+#0 /home/max/server/student/protected/views/site/login.php(22): CComponent->__call('createUlr', Array)
+#1 /home/max/server/student/framework/web/CBaseController.php(126): require('/home/max/serve...')
+#2 /home/max/server/student/framework/web/CBaseController.php(95): CBaseController->renderInternal('/home/max/serve...', Array, true)
+#3 /home/max/server/student/framework/web/CController.php(869): CBaseController->renderFile('/home/max/serve...', Array, true)
+#4 /home/max/server/student/framework/web/CController.php(782): CController->renderPartial('login', Array, true)
+#5 /home/max/server/student/protected/controllers/SiteController.php(98): CController->render('login', Array)
+#6 /home/max/server/student/framework/web/actions/CInlineAction.php(49): SiteController->actionLogin()
+#7 /home/max/server/student/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#8 /home/max/server/student/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#9 /home/max/server/student/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 /home/max/server/student/framework/web/CWebApplication.php(282): CController->run('login')
+#11 /home/max/server/student/framework/web/CWebApplication.php(141): CWebApplication->runController('site/login')
+#12 /home/max/server/student/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#13 /home/max/server/student/index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/index.php?r=site/login
+HTTP_REFERER=http://student/index.php?r=site/index
+---
+2017/04/13 21:16:18 [error] [exception.CException] CException: Property "Post.name" is not defined. in /home/max/server/student/framework/base/CComponent.php:130
+Stack trace:
+#0 /home/max/server/student/framework/db/ar/CActiveRecord.php(145): CComponent->__get('name')
+#1 /home/max/server/student/protected/views/post/index.php(16): CActiveRecord->__get('name')
+#2 /home/max/server/student/framework/web/CBaseController.php(126): require('/home/max/serve...')
+#3 /home/max/server/student/framework/web/CBaseController.php(95): CBaseController->renderInternal('/home/max/serve...', Array, true)
+#4 /home/max/server/student/framework/web/CController.php(869): CBaseController->renderFile('/home/max/serve...', Array, true)
+#5 /home/max/server/student/framework/web/CController.php(782): CController->renderPartial('index', Array, true)
+#6 /home/max/server/student/protected/controllers/PostController.php(72): CController->render('index', Array)
+#7 /home/max/server/student/framework/web/actions/CInlineAction.php(49): PostController->actionIndex()
+#8 /home/max/server/student/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#9 /home/max/server/student/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#10 /home/max/server/student/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#11 /home/max/server/student/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#12 /home/max/server/student/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#13 /home/max/server/student/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#14 /home/max/server/student/framework/web/CController.php(291): CFilterChain->run()
+#15 /home/max/server/student/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#16 /home/max/server/student/framework/web/CWebApplication.php(282): CController->run('index')
+#17 /home/max/server/student/framework/web/CWebApplication.php(141): CWebApplication->runController('post/index')
+#18 /home/max/server/student/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#19 /home/max/server/student/index.php(13): CApplication->run()
+#20 {main}
+REQUEST_URI=/index.php?r=post/index
+HTTP_REFERER=http://student/index.php?r=subject/index
+---
+2017/04/13 21:16:33 [error] [exception.CException] CException: Property "Post.name" is not defined. in /home/max/server/student/framework/base/CComponent.php:130
+Stack trace:
+#0 /home/max/server/student/framework/db/ar/CActiveRecord.php(145): CComponent->__get('name')
+#1 /home/max/server/student/protected/views/post/index.php(16): CActiveRecord->__get('name')
+#2 /home/max/server/student/framework/web/CBaseController.php(126): require('/home/max/serve...')
+#3 /home/max/server/student/framework/web/CBaseController.php(95): CBaseController->renderInternal('/home/max/serve...', Array, true)
+#4 /home/max/server/student/framework/web/CController.php(869): CBaseController->renderFile('/home/max/serve...', Array, true)
+#5 /home/max/server/student/framework/web/CController.php(782): CController->renderPartial('index', Array, true)
+#6 /home/max/server/student/protected/controllers/PostController.php(72): CController->render('index', Array)
+#7 /home/max/server/student/framework/web/actions/CInlineAction.php(49): PostController->actionIndex()
+#8 /home/max/server/student/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#9 /home/max/server/student/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#10 /home/max/server/student/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#11 /home/max/server/student/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#12 /home/max/server/student/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#13 /home/max/server/student/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#14 /home/max/server/student/framework/web/CController.php(291): CFilterChain->run()
+#15 /home/max/server/student/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#16 /home/max/server/student/framework/web/CWebApplication.php(282): CController->run('index')
+#17 /home/max/server/student/framework/web/CWebApplication.php(141): CWebApplication->runController('post/index')
+#18 /home/max/server/student/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#19 /home/max/server/student/index.php(13): CApplication->run()
+#20 {main}
+REQUEST_URI=/index.php?r=post/index
+HTTP_REFERER=http://student/index.php?r=subject/index
+---
+2017/04/13 21:16:35 [error] [exception.CException] CException: Property "Post.name" is not defined. in /home/max/server/student/framework/base/CComponent.php:130
+Stack trace:
+#0 /home/max/server/student/framework/db/ar/CActiveRecord.php(145): CComponent->__get('name')
+#1 /home/max/server/student/protected/views/post/index.php(16): CActiveRecord->__get('name')
+#2 /home/max/server/student/framework/web/CBaseController.php(126): require('/home/max/serve...')
+#3 /home/max/server/student/framework/web/CBaseController.php(95): CBaseController->renderInternal('/home/max/serve...', Array, true)
+#4 /home/max/server/student/framework/web/CController.php(869): CBaseController->renderFile('/home/max/serve...', Array, true)
+#5 /home/max/server/student/framework/web/CController.php(782): CController->renderPartial('index', Array, true)
+#6 /home/max/server/student/protected/controllers/PostController.php(72): CController->render('index', Array)
+#7 /home/max/server/student/framework/web/actions/CInlineAction.php(49): PostController->actionIndex()
+#8 /home/max/server/student/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#9 /home/max/server/student/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#10 /home/max/server/student/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#11 /home/max/server/student/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#12 /home/max/server/student/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#13 /home/max/server/student/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#14 /home/max/server/student/framework/web/CController.php(291): CFilterChain->run()
+#15 /home/max/server/student/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#16 /home/max/server/student/framework/web/CWebApplication.php(282): CController->run('index')
+#17 /home/max/server/student/framework/web/CWebApplication.php(141): CWebApplication->runController('post/index')
+#18 /home/max/server/student/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#19 /home/max/server/student/index.php(13): CApplication->run()
+#20 {main}
+REQUEST_URI=/index.php?r=post/index
+HTTP_REFERER=http://student/index.php?r=subject/index
+---
+2017/04/13 21:16:36 [error] [php] Undefined variable: count (/home/max/server/student/protected/views/post/index.php:20)
+Stack trace:
+#0 /home/max/server/student/framework/web/CController.php(869): PostController->renderFile()
+#1 /home/max/server/student/framework/web/CController.php(782): PostController->renderPartial()
+#2 /home/max/server/student/protected/controllers/PostController.php(72): PostController->render()
+#3 /home/max/server/student/framework/web/actions/CInlineAction.php(49): PostController->actionIndex()
+#4 /home/max/server/student/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /home/max/server/student/framework/web/filters/CFilterChain.php(133): PostController->runAction()
+#6 /home/max/server/student/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /home/max/server/student/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#8 /home/max/server/student/framework/web/filters/CInlineFilter.php(58): PostController->filterAccessControl()
+#9 /home/max/server/student/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#10 /home/max/server/student/framework/web/CController.php(291): CFilterChain->run()
+#11 /home/max/server/student/framework/web/CController.php(265): PostController->runActionWithFilters()
+#12 /home/max/server/student/framework/web/CWebApplication.php(282): PostController->run()
+#13 /home/max/server/student/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#14 /home/max/server/student/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#15 /home/max/server/student/index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php?r=post/index
+in /home/max/server/student/protected/views/post/index.php (20)
+in /home/max/server/student/protected/controllers/PostController.php (72)
+in /home/max/server/student/index.php (13)
+2017/04/13 21:16:42 [error] [php] Undefined variable: count (/home/max/server/student/protected/views/post/index.php:20)
+Stack trace:
+#0 /home/max/server/student/framework/web/CController.php(869): PostController->renderFile()
+#1 /home/max/server/student/framework/web/CController.php(782): PostController->renderPartial()
+#2 /home/max/server/student/protected/controllers/PostController.php(72): PostController->render()
+#3 /home/max/server/student/framework/web/actions/CInlineAction.php(49): PostController->actionIndex()
+#4 /home/max/server/student/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /home/max/server/student/framework/web/filters/CFilterChain.php(133): PostController->runAction()
+#6 /home/max/server/student/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /home/max/server/student/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#8 /home/max/server/student/framework/web/filters/CInlineFilter.php(58): PostController->filterAccessControl()
+#9 /home/max/server/student/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#10 /home/max/server/student/framework/web/CController.php(291): CFilterChain->run()
+#11 /home/max/server/student/framework/web/CController.php(265): PostController->runActionWithFilters()
+#12 /home/max/server/student/framework/web/CWebApplication.php(282): PostController->run()
+#13 /home/max/server/student/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#14 /home/max/server/student/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#15 /home/max/server/student/index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php?r=post/index
+in /home/max/server/student/protected/views/post/index.php (20)
+in /home/max/server/student/protected/controllers/PostController.php (72)
+in /home/max/server/student/index.php (13)
+2017/04/13 21:16:44 [error] [php] Undefined variable: count (/home/max/server/student/protected/views/post/index.php:20)
+Stack trace:
+#0 /home/max/server/student/framework/web/CController.php(869): PostController->renderFile()
+#1 /home/max/server/student/framework/web/CController.php(782): PostController->renderPartial()
+#2 /home/max/server/student/protected/controllers/PostController.php(72): PostController->render()
+#3 /home/max/server/student/framework/web/actions/CInlineAction.php(49): PostController->actionIndex()
+#4 /home/max/server/student/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /home/max/server/student/framework/web/filters/CFilterChain.php(133): PostController->runAction()
+#6 /home/max/server/student/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /home/max/server/student/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#8 /home/max/server/student/framework/web/filters/CInlineFilter.php(58): PostController->filterAccessControl()
+#9 /home/max/server/student/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#10 /home/max/server/student/framework/web/CController.php(291): CFilterChain->run()
+#11 /home/max/server/student/framework/web/CController.php(265): PostController->runActionWithFilters()
+#12 /home/max/server/student/framework/web/CWebApplication.php(282): PostController->run()
+#13 /home/max/server/student/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#14 /home/max/server/student/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#15 /home/max/server/student/index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php?r=post/index
+in /home/max/server/student/protected/views/post/index.php (20)
+in /home/max/server/student/protected/controllers/PostController.php (72)
+in /home/max/server/student/index.php (13)
+2017/04/13 21:16:44 [error] [php] Undefined variable: count (/home/max/server/student/protected/views/post/index.php:20)
+Stack trace:
+#0 /home/max/server/student/framework/web/CController.php(869): PostController->renderFile()
+#1 /home/max/server/student/framework/web/CController.php(782): PostController->renderPartial()
+#2 /home/max/server/student/protected/controllers/PostController.php(72): PostController->render()
+#3 /home/max/server/student/framework/web/actions/CInlineAction.php(49): PostController->actionIndex()
+#4 /home/max/server/student/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /home/max/server/student/framework/web/filters/CFilterChain.php(133): PostController->runAction()
+#6 /home/max/server/student/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /home/max/server/student/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#8 /home/max/server/student/framework/web/filters/CInlineFilter.php(58): PostController->filterAccessControl()
+#9 /home/max/server/student/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#10 /home/max/server/student/framework/web/CController.php(291): CFilterChain->run()
+#11 /home/max/server/student/framework/web/CController.php(265): PostController->runActionWithFilters()
+#12 /home/max/server/student/framework/web/CWebApplication.php(282): PostController->run()
+#13 /home/max/server/student/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#14 /home/max/server/student/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#15 /home/max/server/student/index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php?r=post/index
+in /home/max/server/student/protected/views/post/index.php (20)
+in /home/max/server/student/protected/controllers/PostController.php (72)
+in /home/max/server/student/index.php (13)
+2017/04/14 10:03:18 [error] [php] Trying to get property of non-object (/home/max/server/student/protected/views/subject/index.php:25)
+Stack trace:
+#0 /home/max/server/student/framework/web/CController.php(869): SubjectController->renderFile()
+#1 /home/max/server/student/framework/web/CController.php(782): SubjectController->renderPartial()
+#2 /home/max/server/student/protected/controllers/SubjectController.php(57): SubjectController->render()
+#3 /home/max/server/student/framework/web/actions/CInlineAction.php(49): SubjectController->actionIndex()
+#4 /home/max/server/student/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /home/max/server/student/framework/web/filters/CFilterChain.php(133): SubjectController->runAction()
+#6 /home/max/server/student/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /home/max/server/student/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#8 /home/max/server/student/framework/web/filters/CInlineFilter.php(58): SubjectController->filterAccessControl()
+#9 /home/max/server/student/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#10 /home/max/server/student/framework/web/CController.php(291): CFilterChain->run()
+#11 /home/max/server/student/framework/web/CController.php(265): SubjectController->runActionWithFilters()
+#12 /home/max/server/student/framework/web/CWebApplication.php(282): SubjectController->run()
+#13 /home/max/server/student/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#14 /home/max/server/student/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#15 /home/max/server/student/index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php?r=subject/index
+in /home/max/server/student/protected/views/subject/index.php (25)
+in /home/max/server/student/protected/controllers/SubjectController.php (57)
+in /home/max/server/student/index.php (13)
+2017/04/14 10:03:21 [error] [php] Trying to get property of non-object (/home/max/server/student/protected/views/subject/index.php:25)
+Stack trace:
+#0 /home/max/server/student/framework/web/CController.php(869): SubjectController->renderFile()
+#1 /home/max/server/student/framework/web/CController.php(782): SubjectController->renderPartial()
+#2 /home/max/server/student/protected/controllers/SubjectController.php(57): SubjectController->render()
+#3 /home/max/server/student/framework/web/actions/CInlineAction.php(49): SubjectController->actionIndex()
+#4 /home/max/server/student/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /home/max/server/student/framework/web/filters/CFilterChain.php(133): SubjectController->runAction()
+#6 /home/max/server/student/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /home/max/server/student/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#8 /home/max/server/student/framework/web/filters/CInlineFilter.php(58): SubjectController->filterAccessControl()
+#9 /home/max/server/student/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#10 /home/max/server/student/framework/web/CController.php(291): CFilterChain->run()
+#11 /home/max/server/student/framework/web/CController.php(265): SubjectController->runActionWithFilters()
+#12 /home/max/server/student/framework/web/CWebApplication.php(282): SubjectController->run()
+#13 /home/max/server/student/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#14 /home/max/server/student/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#15 /home/max/server/student/index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php?r=subject/index
+in /home/max/server/student/protected/views/subject/index.php (25)
+in /home/max/server/student/protected/controllers/SubjectController.php (57)
+in /home/max/server/student/index.php (13)
+2017/04/14 10:18:43 [error] [exception.CException] CException: Property "Post.name" is not defined. in /home/max/server/student/framework/base/CComponent.php:130
+Stack trace:
+#0 /home/max/server/student/framework/db/ar/CActiveRecord.php(145): CComponent->__get('name')
+#1 /home/max/server/student/protected/views/post/view.php(21): CActiveRecord->__get('name')
+#2 /home/max/server/student/framework/web/CBaseController.php(126): require('/home/max/serve...')
+#3 /home/max/server/student/framework/web/CBaseController.php(95): CBaseController->renderInternal('/home/max/serve...', Array, true)
+#4 /home/max/server/student/framework/web/CController.php(869): CBaseController->renderFile('/home/max/serve...', Array, true)
+#5 /home/max/server/student/framework/web/CController.php(782): CController->renderPartial('view', Array, true)
+#6 /home/max/server/student/protected/controllers/PostController.php(59): CController->render('view', Array)
+#7 [internal function]: PostController->actionView('1')
+#8 /home/max/server/student/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs(Object(PostController), Array)
+#9 /home/max/server/student/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(PostController), Object(ReflectionMethod), Array)
+#10 /home/max/server/student/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#11 /home/max/server/student/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#12 /home/max/server/student/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#13 /home/max/server/student/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#14 /home/max/server/student/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#15 /home/max/server/student/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#16 /home/max/server/student/framework/web/CController.php(291): CFilterChain->run()
+#17 /home/max/server/student/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 /home/max/server/student/framework/web/CWebApplication.php(282): CController->run('view')
+#19 /home/max/server/student/framework/web/CWebApplication.php(141): CWebApplication->runController('post/view')
+#20 /home/max/server/student/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#21 /home/max/server/student/index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/index.php?r=post/view&id=1
+HTTP_REFERER=http://student/index.php?r=post/index
+---
+2017/04/14 10:18:44 [error] [exception.CException] CException: Property "Post.name" is not defined. in /home/max/server/student/framework/base/CComponent.php:130
+Stack trace:
+#0 /home/max/server/student/framework/db/ar/CActiveRecord.php(145): CComponent->__get('name')
+#1 /home/max/server/student/protected/views/post/view.php(21): CActiveRecord->__get('name')
+#2 /home/max/server/student/framework/web/CBaseController.php(126): require('/home/max/serve...')
+#3 /home/max/server/student/framework/web/CBaseController.php(95): CBaseController->renderInternal('/home/max/serve...', Array, true)
+#4 /home/max/server/student/framework/web/CController.php(869): CBaseController->renderFile('/home/max/serve...', Array, true)
+#5 /home/max/server/student/framework/web/CController.php(782): CController->renderPartial('view', Array, true)
+#6 /home/max/server/student/protected/controllers/PostController.php(59): CController->render('view', Array)
+#7 [internal function]: PostController->actionView('1')
+#8 /home/max/server/student/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs(Object(PostController), Array)
+#9 /home/max/server/student/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(PostController), Object(ReflectionMethod), Array)
+#10 /home/max/server/student/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#11 /home/max/server/student/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#12 /home/max/server/student/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#13 /home/max/server/student/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#14 /home/max/server/student/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#15 /home/max/server/student/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#16 /home/max/server/student/framework/web/CController.php(291): CFilterChain->run()
+#17 /home/max/server/student/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 /home/max/server/student/framework/web/CWebApplication.php(282): CController->run('view')
+#19 /home/max/server/student/framework/web/CWebApplication.php(141): CWebApplication->runController('post/view')
+#20 /home/max/server/student/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#21 /home/max/server/student/index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/index.php?r=post/view&id=1
+HTTP_REFERER=http://student/index.php?r=post/index
+---
+2017/04/14 10:19:05 [error] [exception.CException] CException: Property "Post.name" is not defined. in /home/max/server/student/framework/base/CComponent.php:130
+Stack trace:
+#0 /home/max/server/student/framework/db/ar/CActiveRecord.php(145): CComponent->__get('name')
+#1 /home/max/server/student/protected/views/post/view.php(21): CActiveRecord->__get('name')
+#2 /home/max/server/student/framework/web/CBaseController.php(126): require('/home/max/serve...')
+#3 /home/max/server/student/framework/web/CBaseController.php(95): CBaseController->renderInternal('/home/max/serve...', Array, true)
+#4 /home/max/server/student/framework/web/CController.php(869): CBaseController->renderFile('/home/max/serve...', Array, true)
+#5 /home/max/server/student/framework/web/CController.php(782): CController->renderPartial('view', Array, true)
+#6 /home/max/server/student/protected/controllers/PostController.php(59): CController->render('view', Array)
+#7 [internal function]: PostController->actionView('1')
+#8 /home/max/server/student/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs(Object(PostController), Array)
+#9 /home/max/server/student/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(PostController), Object(ReflectionMethod), Array)
+#10 /home/max/server/student/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#11 /home/max/server/student/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#12 /home/max/server/student/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#13 /home/max/server/student/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#14 /home/max/server/student/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#15 /home/max/server/student/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#16 /home/max/server/student/framework/web/CController.php(291): CFilterChain->run()
+#17 /home/max/server/student/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 /home/max/server/student/framework/web/CWebApplication.php(282): CController->run('view')
+#19 /home/max/server/student/framework/web/CWebApplication.php(141): CWebApplication->runController('post/view')
+#20 /home/max/server/student/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#21 /home/max/server/student/index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/index.php?r=post/view&id=1
+HTTP_REFERER=http://student/index.php?r=post/index
+---
+2017/04/14 10:19:06 [error] [exception.CException] CException: Property "Post.name" is not defined. in /home/max/server/student/framework/base/CComponent.php:130
+Stack trace:
+#0 /home/max/server/student/framework/db/ar/CActiveRecord.php(145): CComponent->__get('name')
+#1 /home/max/server/student/protected/views/post/view.php(21): CActiveRecord->__get('name')
+#2 /home/max/server/student/framework/web/CBaseController.php(126): require('/home/max/serve...')
+#3 /home/max/server/student/framework/web/CBaseController.php(95): CBaseController->renderInternal('/home/max/serve...', Array, true)
+#4 /home/max/server/student/framework/web/CController.php(869): CBaseController->renderFile('/home/max/serve...', Array, true)
+#5 /home/max/server/student/framework/web/CController.php(782): CController->renderPartial('view', Array, true)
+#6 /home/max/server/student/protected/controllers/PostController.php(59): CController->render('view', Array)
+#7 [internal function]: PostController->actionView('1')
+#8 /home/max/server/student/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs(Object(PostController), Array)
+#9 /home/max/server/student/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(PostController), Object(ReflectionMethod), Array)
+#10 /home/max/server/student/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#11 /home/max/server/student/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#12 /home/max/server/student/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#13 /home/max/server/student/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#14 /home/max/server/student/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#15 /home/max/server/student/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#16 /home/max/server/student/framework/web/CController.php(291): CFilterChain->run()
+#17 /home/max/server/student/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 /home/max/server/student/framework/web/CWebApplication.php(282): CController->run('view')
+#19 /home/max/server/student/framework/web/CWebApplication.php(141): CWebApplication->runController('post/view')
+#20 /home/max/server/student/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#21 /home/max/server/student/index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/index.php?r=post/view&id=1
+HTTP_REFERER=http://student/index.php?r=post/index
+---
+2017/04/14 10:19:07 [error] [exception.CException] CException: Property "Post.name" is not defined. in /home/max/server/student/framework/base/CComponent.php:130
+Stack trace:
+#0 /home/max/server/student/framework/db/ar/CActiveRecord.php(145): CComponent->__get('name')
+#1 /home/max/server/student/protected/views/post/view.php(21): CActiveRecord->__get('name')
+#2 /home/max/server/student/framework/web/CBaseController.php(126): require('/home/max/serve...')
+#3 /home/max/server/student/framework/web/CBaseController.php(95): CBaseController->renderInternal('/home/max/serve...', Array, true)
+#4 /home/max/server/student/framework/web/CController.php(869): CBaseController->renderFile('/home/max/serve...', Array, true)
+#5 /home/max/server/student/framework/web/CController.php(782): CController->renderPartial('view', Array, true)
+#6 /home/max/server/student/protected/controllers/PostController.php(59): CController->render('view', Array)
+#7 [internal function]: PostController->actionView('1')
+#8 /home/max/server/student/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs(Object(PostController), Array)
+#9 /home/max/server/student/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(PostController), Object(ReflectionMethod), Array)
+#10 /home/max/server/student/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#11 /home/max/server/student/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#12 /home/max/server/student/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#13 /home/max/server/student/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#14 /home/max/server/student/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#15 /home/max/server/student/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#16 /home/max/server/student/framework/web/CController.php(291): CFilterChain->run()
+#17 /home/max/server/student/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 /home/max/server/student/framework/web/CWebApplication.php(282): CController->run('view')
+#19 /home/max/server/student/framework/web/CWebApplication.php(141): CWebApplication->runController('post/view')
+#20 /home/max/server/student/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#21 /home/max/server/student/index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/index.php?r=post/view&id=1
+HTTP_REFERER=http://student/index.php?r=post/index
+---
+2017/04/14 13:48:07 [error] [exception.CException] CException: Property "CDateValidator.0" is not defined. in /home/max/server/student/framework/base/CComponent.php:173
+Stack trace:
+#0 /home/max/server/student/framework/validators/CValidator.php(177): CComponent->__set('0', 'numerical')
+#1 /home/max/server/student/framework/base/CModel.php(287): CValidator::createValidator(0, Object(Post), Array, Array)
+#2 /home/max/server/student/framework/base/CModel.php(260): CModel->createValidators()
+#3 /home/max/server/student/framework/base/CModel.php(158): CModel->getValidators()
+#4 /home/max/server/student/framework/db/ar/CActiveRecord.php(808): CModel->validate(NULL)
+#5 /home/max/server/student/protected/controllers/PostController.php(149): CActiveRecord->save()
+#6 [internal function]: PostController->actionRatingplus('2')
+#7 /home/max/server/student/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs(Object(PostController), Array)
+#8 /home/max/server/student/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(PostController), Object(ReflectionMethod), Array)
+#9 /home/max/server/student/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#10 /home/max/server/student/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#11 /home/max/server/student/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#12 /home/max/server/student/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#13 /home/max/server/student/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#14 /home/max/server/student/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#15 /home/max/server/student/framework/web/CController.php(291): CFilterChain->run()
+#16 /home/max/server/student/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#17 /home/max/server/student/framework/web/CWebApplication.php(282): CController->run('ratingplus')
+#18 /home/max/server/student/framework/web/CWebApplication.php(141): CWebApplication->runController('post/ratingplus')
+#19 /home/max/server/student/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#20 /home/max/server/student/index.php(13): CApplication->run()
+#21 {main}
+REQUEST_URI=/index.php?r=post/ratingplus&id=2
+HTTP_REFERER=http://student/index.php?r=post/view&id=2
+---
+2017/04/14 13:48:22 [error] [exception.CException] CException: Property "CDateValidator.0" is not defined. in /home/max/server/student/framework/base/CComponent.php:173
+Stack trace:
+#0 /home/max/server/student/framework/validators/CValidator.php(177): CComponent->__set('0', 'numerical')
+#1 /home/max/server/student/framework/base/CModel.php(287): CValidator::createValidator(0, Object(Post), Array, Array)
+#2 /home/max/server/student/framework/base/CModel.php(260): CModel->createValidators()
+#3 /home/max/server/student/framework/base/CModel.php(158): CModel->getValidators()
+#4 /home/max/server/student/framework/db/ar/CActiveRecord.php(808): CModel->validate(NULL)
+#5 /home/max/server/student/protected/controllers/PostController.php(149): CActiveRecord->save()
+#6 [internal function]: PostController->actionRatingplus('2')
+#7 /home/max/server/student/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs(Object(PostController), Array)
+#8 /home/max/server/student/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(PostController), Object(ReflectionMethod), Array)
+#9 /home/max/server/student/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#10 /home/max/server/student/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#11 /home/max/server/student/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#12 /home/max/server/student/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#13 /home/max/server/student/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#14 /home/max/server/student/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#15 /home/max/server/student/framework/web/CController.php(291): CFilterChain->run()
+#16 /home/max/server/student/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#17 /home/max/server/student/framework/web/CWebApplication.php(282): CController->run('ratingplus')
+#18 /home/max/server/student/framework/web/CWebApplication.php(141): CWebApplication->runController('post/ratingplus')
+#19 /home/max/server/student/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#20 /home/max/server/student/index.php(13): CApplication->run()
+#21 {main}
+REQUEST_URI=/index.php?r=post/ratingplus&id=2
+HTTP_REFERER=http://student/index.php?r=post/view&id=2
+---
+2017/04/14 13:50:11 [error] [exception.CException] CException: Property "CDateValidator.0" is not defined. in /home/max/server/student/framework/base/CComponent.php:173
+Stack trace:
+#0 /home/max/server/student/framework/validators/CValidator.php(177): CComponent->__set('0', 'numerical')
+#1 /home/max/server/student/framework/base/CModel.php(287): CValidator::createValidator(0, Object(Post), Array, Array)
+#2 /home/max/server/student/framework/base/CModel.php(260): CModel->createValidators()
+#3 /home/max/server/student/framework/base/CModel.php(158): CModel->getValidators()
+#4 /home/max/server/student/framework/db/ar/CActiveRecord.php(808): CModel->validate(NULL)
+#5 /home/max/server/student/protected/controllers/PostController.php(149): CActiveRecord->save()
+#6 [internal function]: PostController->actionRatingplus('1')
+#7 /home/max/server/student/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs(Object(PostController), Array)
+#8 /home/max/server/student/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(PostController), Object(ReflectionMethod), Array)
+#9 /home/max/server/student/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#10 /home/max/server/student/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#11 /home/max/server/student/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#12 /home/max/server/student/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#13 /home/max/server/student/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#14 /home/max/server/student/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#15 /home/max/server/student/framework/web/CController.php(291): CFilterChain->run()
+#16 /home/max/server/student/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#17 /home/max/server/student/framework/web/CWebApplication.php(282): CController->run('ratingplus')
+#18 /home/max/server/student/framework/web/CWebApplication.php(141): CWebApplication->runController('post/ratingplus')
+#19 /home/max/server/student/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#20 /home/max/server/student/index.php(13): CApplication->run()
+#21 {main}
+REQUEST_URI=/index.php?r=post/ratingplus&id=1
+HTTP_REFERER=http://student/index.php?r=post/view&id=1
+---
+2017/04/14 14:58:15 [error] [exception.CException] CException: Property "Comment.body" is not defined. in /home/max/server/student/framework/base/CComponent.php:130
+Stack trace:
+#0 /home/max/server/student/framework/db/ar/CActiveRecord.php(145): CComponent->__get('body')
+#1 /home/max/server/student/protected/views/post/view.php(78): CActiveRecord->__get('body')
+#2 /home/max/server/student/framework/web/CBaseController.php(126): require('/home/max/serve...')
+#3 /home/max/server/student/framework/web/CBaseController.php(95): CBaseController->renderInternal('/home/max/serve...', Array, true)
+#4 /home/max/server/student/framework/web/CController.php(869): CBaseController->renderFile('/home/max/serve...', Array, true)
+#5 /home/max/server/student/framework/web/CController.php(782): CController->renderPartial('view', Array, true)
+#6 /home/max/server/student/protected/controllers/PostController.php(62): CController->render('view', Array)
+#7 [internal function]: PostController->actionView('1')
+#8 /home/max/server/student/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs(Object(PostController), Array)
+#9 /home/max/server/student/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(PostController), Object(ReflectionMethod), Array)
+#10 /home/max/server/student/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#11 /home/max/server/student/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#12 /home/max/server/student/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#13 /home/max/server/student/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#14 /home/max/server/student/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#15 /home/max/server/student/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#16 /home/max/server/student/framework/web/CController.php(291): CFilterChain->run()
+#17 /home/max/server/student/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 /home/max/server/student/framework/web/CWebApplication.php(282): CController->run('view')
+#19 /home/max/server/student/framework/web/CWebApplication.php(141): CWebApplication->runController('post/view')
+#20 /home/max/server/student/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#21 /home/max/server/student/index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/index.php?r=post/view&id=1
+HTTP_REFERER=http://student/index.php?r=post/view&id=1
+---
+2017/04/14 14:58:22 [error] [exception.CException] CException: Property "Comment.body" is not defined. in /home/max/server/student/framework/base/CComponent.php:130
+Stack trace:
+#0 /home/max/server/student/framework/db/ar/CActiveRecord.php(145): CComponent->__get('body')
+#1 /home/max/server/student/protected/views/post/view.php(78): CActiveRecord->__get('body')
+#2 /home/max/server/student/framework/web/CBaseController.php(126): require('/home/max/serve...')
+#3 /home/max/server/student/framework/web/CBaseController.php(95): CBaseController->renderInternal('/home/max/serve...', Array, true)
+#4 /home/max/server/student/framework/web/CController.php(869): CBaseController->renderFile('/home/max/serve...', Array, true)
+#5 /home/max/server/student/framework/web/CController.php(782): CController->renderPartial('view', Array, true)
+#6 /home/max/server/student/protected/controllers/PostController.php(62): CController->render('view', Array)
+#7 [internal function]: PostController->actionView('1')
+#8 /home/max/server/student/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs(Object(PostController), Array)
+#9 /home/max/server/student/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(PostController), Object(ReflectionMethod), Array)
+#10 /home/max/server/student/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#11 /home/max/server/student/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#12 /home/max/server/student/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#13 /home/max/server/student/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#14 /home/max/server/student/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#15 /home/max/server/student/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#16 /home/max/server/student/framework/web/CController.php(291): CFilterChain->run()
+#17 /home/max/server/student/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 /home/max/server/student/framework/web/CWebApplication.php(282): CController->run('view')
+#19 /home/max/server/student/framework/web/CWebApplication.php(141): CWebApplication->runController('post/view')
+#20 /home/max/server/student/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#21 /home/max/server/student/index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/index.php?r=post/view&id=1
+HTTP_REFERER=http://student/index.php?r=post/view&id=1
+---
+2017/04/14 14:58:24 [error] [exception.CException] CException: Property "Comment.body" is not defined. in /home/max/server/student/framework/base/CComponent.php:130
+Stack trace:
+#0 /home/max/server/student/framework/db/ar/CActiveRecord.php(145): CComponent->__get('body')
+#1 /home/max/server/student/protected/views/post/view.php(78): CActiveRecord->__get('body')
+#2 /home/max/server/student/framework/web/CBaseController.php(126): require('/home/max/serve...')
+#3 /home/max/server/student/framework/web/CBaseController.php(95): CBaseController->renderInternal('/home/max/serve...', Array, true)
+#4 /home/max/server/student/framework/web/CController.php(869): CBaseController->renderFile('/home/max/serve...', Array, true)
+#5 /home/max/server/student/framework/web/CController.php(782): CController->renderPartial('view', Array, true)
+#6 /home/max/server/student/protected/controllers/PostController.php(62): CController->render('view', Array)
+#7 [internal function]: PostController->actionView('1')
+#8 /home/max/server/student/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs(Object(PostController), Array)
+#9 /home/max/server/student/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(PostController), Object(ReflectionMethod), Array)
+#10 /home/max/server/student/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#11 /home/max/server/student/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#12 /home/max/server/student/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#13 /home/max/server/student/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#14 /home/max/server/student/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#15 /home/max/server/student/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#16 /home/max/server/student/framework/web/CController.php(291): CFilterChain->run()
+#17 /home/max/server/student/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 /home/max/server/student/framework/web/CWebApplication.php(282): CController->run('view')
+#19 /home/max/server/student/framework/web/CWebApplication.php(141): CWebApplication->runController('post/view')
+#20 /home/max/server/student/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#21 /home/max/server/student/index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/index.php?r=post/view&id=1
+HTTP_REFERER=http://student/index.php?r=post/view&id=1
+---
+2017/04/14 15:30:07 [error] [php] Trying to get property of non-object (/home/max/server/student/protected/views/subject/view.php:17)
+Stack trace:
+#0 /home/max/server/student/framework/web/CController.php(869): SubjectController->renderFile()
+#1 /home/max/server/student/framework/web/CController.php(782): SubjectController->renderPartial()
+#2 /home/max/server/student/protected/controllers/SubjectController.php(47): SubjectController->render()
+#3 unknown(0): SubjectController->actionView()
+#4 /home/max/server/student/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs()
+#5 /home/max/server/student/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#6 /home/max/server/student/framework/web/CController.php(308): CInlineAction->runWithParams()
+#7 /home/max/server/student/framework/web/filters/CFilterChain.php(133): SubjectController->runAction()
+#8 /home/max/server/student/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#9 /home/max/server/student/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#10 /home/max/server/student/framework/web/filters/CInlineFilter.php(58): SubjectController->filterAccessControl()
+#11 /home/max/server/student/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#12 /home/max/server/student/framework/web/CController.php(291): CFilterChain->run()
+#13 /home/max/server/student/framework/web/CController.php(265): SubjectController->runActionWithFilters()
+#14 /home/max/server/student/framework/web/CWebApplication.php(282): SubjectController->run()
+#15 /home/max/server/student/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#16 /home/max/server/student/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#17 /home/max/server/student/index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php?r=subject/view&id=1
+in /home/max/server/student/protected/views/subject/view.php (17)
+in /home/max/server/student/protected/controllers/SubjectController.php (47)
+in /home/max/server/student/index.php (13)
+2017/04/14 15:30:36 [error] [php] Trying to get property of non-object (/home/max/server/student/protected/views/subject/view.php:17)
+Stack trace:
+#0 /home/max/server/student/framework/web/CController.php(869): SubjectController->renderFile()
+#1 /home/max/server/student/framework/web/CController.php(782): SubjectController->renderPartial()
+#2 /home/max/server/student/protected/controllers/SubjectController.php(47): SubjectController->render()
+#3 unknown(0): SubjectController->actionView()
+#4 /home/max/server/student/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs()
+#5 /home/max/server/student/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#6 /home/max/server/student/framework/web/CController.php(308): CInlineAction->runWithParams()
+#7 /home/max/server/student/framework/web/filters/CFilterChain.php(133): SubjectController->runAction()
+#8 /home/max/server/student/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#9 /home/max/server/student/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#10 /home/max/server/student/framework/web/filters/CInlineFilter.php(58): SubjectController->filterAccessControl()
+#11 /home/max/server/student/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#12 /home/max/server/student/framework/web/CController.php(291): CFilterChain->run()
+#13 /home/max/server/student/framework/web/CController.php(265): SubjectController->runActionWithFilters()
+#14 /home/max/server/student/framework/web/CWebApplication.php(282): SubjectController->run()
+#15 /home/max/server/student/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#16 /home/max/server/student/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#17 /home/max/server/student/index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php?r=subject/view&id=1
+in /home/max/server/student/protected/views/subject/view.php (17)
+in /home/max/server/student/protected/controllers/SubjectController.php (47)
+in /home/max/server/student/index.php (13)
+2017/04/14 15:32:11 [error] [exception.CDbException] CDbException: Table "post" does not have a column named "order". in /home/max/server/student/framework/db/schema/CDbCommandBuilder.php:697
+Stack trace:
+#0 /home/max/server/student/framework/db/ar/CActiveRecord.php(1540): CDbCommandBuilder->createColumnCriteria(Object(CMysqlTableSchema), Array, '', Array, '`t`.')
+#1 /home/max/server/student/protected/controllers/SubjectController.php(43): CActiveRecord->findAllByAttributes(Array)
+#2 [internal function]: SubjectController->actionView('1')
+#3 /home/max/server/student/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs(Object(SubjectController), Array)
+#4 /home/max/server/student/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(SubjectController), Object(ReflectionMethod), Array)
+#5 /home/max/server/student/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#6 /home/max/server/student/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#7 /home/max/server/student/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#8 /home/max/server/student/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#9 /home/max/server/student/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#10 /home/max/server/student/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#11 /home/max/server/student/framework/web/CController.php(291): CFilterChain->run()
+#12 /home/max/server/student/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /home/max/server/student/framework/web/CWebApplication.php(282): CController->run('view')
+#14 /home/max/server/student/framework/web/CWebApplication.php(141): CWebApplication->runController('subject/view')
+#15 /home/max/server/student/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#16 /home/max/server/student/index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/index.php?r=subject/view&id=1
+HTTP_REFERER=http://student/index.php?r=subject/index
+---
+2017/04/14 15:32:12 [error] [exception.CDbException] CDbException: Table "post" does not have a column named "order". in /home/max/server/student/framework/db/schema/CDbCommandBuilder.php:697
+Stack trace:
+#0 /home/max/server/student/framework/db/ar/CActiveRecord.php(1540): CDbCommandBuilder->createColumnCriteria(Object(CMysqlTableSchema), Array, '', Array, '`t`.')
+#1 /home/max/server/student/protected/controllers/SubjectController.php(43): CActiveRecord->findAllByAttributes(Array)
+#2 [internal function]: SubjectController->actionView('1')
+#3 /home/max/server/student/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs(Object(SubjectController), Array)
+#4 /home/max/server/student/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(SubjectController), Object(ReflectionMethod), Array)
+#5 /home/max/server/student/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#6 /home/max/server/student/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#7 /home/max/server/student/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#8 /home/max/server/student/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#9 /home/max/server/student/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#10 /home/max/server/student/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#11 /home/max/server/student/framework/web/CController.php(291): CFilterChain->run()
+#12 /home/max/server/student/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /home/max/server/student/framework/web/CWebApplication.php(282): CController->run('view')
+#14 /home/max/server/student/framework/web/CWebApplication.php(141): CWebApplication->runController('subject/view')
+#15 /home/max/server/student/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#16 /home/max/server/student/index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/index.php?r=subject/view&id=1
+HTTP_REFERER=http://student/index.php?r=subject/index
+---
+2017/04/14 15:33:09 [error] [exception.CDbException] CDbException: Table "post" does not have a column named "0". in /home/max/server/student/framework/db/schema/CDbCommandBuilder.php:697
+Stack trace:
+#0 /home/max/server/student/framework/db/ar/CActiveRecord.php(1540): CDbCommandBuilder->createColumnCriteria(Object(CMysqlTableSchema), Array, '', Array, '`t`.')
+#1 /home/max/server/student/protected/controllers/SubjectController.php(43): CActiveRecord->findAllByAttributes(Array)
+#2 [internal function]: SubjectController->actionView('1')
+#3 /home/max/server/student/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs(Object(SubjectController), Array)
+#4 /home/max/server/student/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(SubjectController), Object(ReflectionMethod), Array)
+#5 /home/max/server/student/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#6 /home/max/server/student/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#7 /home/max/server/student/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#8 /home/max/server/student/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#9 /home/max/server/student/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#10 /home/max/server/student/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#11 /home/max/server/student/framework/web/CController.php(291): CFilterChain->run()
+#12 /home/max/server/student/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /home/max/server/student/framework/web/CWebApplication.php(282): CController->run('view')
+#14 /home/max/server/student/framework/web/CWebApplication.php(141): CWebApplication->runController('subject/view')
+#15 /home/max/server/student/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#16 /home/max/server/student/index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/index.php?r=subject/view&id=1
+HTTP_REFERER=http://student/index.php?r=subject/index
+---
+2017/04/14 15:33:10 [error] [exception.CDbException] CDbException: Table "post" does not have a column named "0". in /home/max/server/student/framework/db/schema/CDbCommandBuilder.php:697
+Stack trace:
+#0 /home/max/server/student/framework/db/ar/CActiveRecord.php(1540): CDbCommandBuilder->createColumnCriteria(Object(CMysqlTableSchema), Array, '', Array, '`t`.')
+#1 /home/max/server/student/protected/controllers/SubjectController.php(43): CActiveRecord->findAllByAttributes(Array)
+#2 [internal function]: SubjectController->actionView('1')
+#3 /home/max/server/student/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs(Object(SubjectController), Array)
+#4 /home/max/server/student/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(SubjectController), Object(ReflectionMethod), Array)
+#5 /home/max/server/student/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#6 /home/max/server/student/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#7 /home/max/server/student/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#8 /home/max/server/student/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#9 /home/max/server/student/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#10 /home/max/server/student/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#11 /home/max/server/student/framework/web/CController.php(291): CFilterChain->run()
+#12 /home/max/server/student/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /home/max/server/student/framework/web/CWebApplication.php(282): CController->run('view')
+#14 /home/max/server/student/framework/web/CWebApplication.php(141): CWebApplication->runController('subject/view')
+#15 /home/max/server/student/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#16 /home/max/server/student/index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/index.php?r=subject/view&id=1
+HTTP_REFERER=http://student/index.php?r=subject/index
+---
+2017/04/14 15:33:11 [error] [exception.CDbException] CDbException: Table "post" does not have a column named "0". in /home/max/server/student/framework/db/schema/CDbCommandBuilder.php:697
+Stack trace:
+#0 /home/max/server/student/framework/db/ar/CActiveRecord.php(1540): CDbCommandBuilder->createColumnCriteria(Object(CMysqlTableSchema), Array, '', Array, '`t`.')
+#1 /home/max/server/student/protected/controllers/SubjectController.php(43): CActiveRecord->findAllByAttributes(Array)
+#2 [internal function]: SubjectController->actionView('1')
+#3 /home/max/server/student/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs(Object(SubjectController), Array)
+#4 /home/max/server/student/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(SubjectController), Object(ReflectionMethod), Array)
+#5 /home/max/server/student/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#6 /home/max/server/student/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#7 /home/max/server/student/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#8 /home/max/server/student/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#9 /home/max/server/student/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#10 /home/max/server/student/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#11 /home/max/server/student/framework/web/CController.php(291): CFilterChain->run()
+#12 /home/max/server/student/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 /home/max/server/student/framework/web/CWebApplication.php(282): CController->run('view')
+#14 /home/max/server/student/framework/web/CWebApplication.php(141): CWebApplication->runController('subject/view')
+#15 /home/max/server/student/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#16 /home/max/server/student/index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/index.php?r=subject/view&id=1
+HTTP_REFERER=http://student/index.php?r=subject/index
+---
+2017/04/14 15:59:59 [error] [php] Undefined variable: user (/home/max/server/student/protected/modules/lk/views/default/index.php:11)
+Stack trace:
+#0 /home/max/server/student/framework/web/CController.php(869): DefaultController->renderFile()
+#1 /home/max/server/student/framework/web/CController.php(782): DefaultController->renderPartial()
+#2 /home/max/server/student/protected/modules/lk/controllers/DefaultController.php(26): DefaultController->render()
+#3 /home/max/server/student/framework/web/actions/CInlineAction.php(49): DefaultController->actionIndex()
+#4 /home/max/server/student/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /home/max/server/student/framework/web/CController.php(286): DefaultController->runAction()
+#6 /home/max/server/student/framework/web/CController.php(265): DefaultController->runActionWithFilters()
+#7 /home/max/server/student/framework/web/CWebApplication.php(282): DefaultController->run()
+#8 /home/max/server/student/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#9 /home/max/server/student/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#10 /home/max/server/student/index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php?r=lk/default
+in /home/max/server/student/protected/modules/lk/views/default/index.php (11)
+in /home/max/server/student/protected/modules/lk/controllers/DefaultController.php (26)
+in /home/max/server/student/index.php (13)
+2017/04/14 16:02:38 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "lk/deafult". in /home/max/server/student/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/max/server/student/framework/web/CWebApplication.php(141): CWebApplication->runController('lk/deafult')
+#1 /home/max/server/student/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /home/max/server/student/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php?r=lk/deafult
+HTTP_REFERER=http://student/index.php?r=lk/default
+---
+2017/04/14 16:07:00 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "lk/bookmarks". in /home/max/server/student/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/max/server/student/framework/web/CWebApplication.php(141): CWebApplication->runController('lk/bookmarks')
+#1 /home/max/server/student/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /home/max/server/student/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php?r=lk/bookmarks
+HTTP_REFERER=http://student/index.php?r=lk/post
+---
+2017/04/14 20:04:32 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1. The SQL statement executed was: select * from subject where id in (select subject_id from post where user_id = ).
+in /home/max/server/student/protected/modules/lk/controllers/DefaultController.php (17)
+in /home/max/server/student/index.php (13)
+2017/04/14 20:04:32 [error] [exception.CDbException] CDbException: CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1. The SQL statement executed was: select * from subject where id in (select subject_id from post where user_id = ) in /home/max/server/student/framework/db/CDbCommand.php:543
+Stack trace:
+#0 /home/max/server/student/framework/db/CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 /home/max/server/student/framework/db/ar/CActiveRecord.php(1586): CDbCommand->queryAll()
+#2 /home/max/server/student/protected/modules/lk/controllers/DefaultController.php(17): CActiveRecord->findAllBySql('select * from s...')
+#3 /home/max/server/student/framework/web/actions/CInlineAction.php(49): DefaultController->actionIndex()
+#4 /home/max/server/student/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /home/max/server/student/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#6 /home/max/server/student/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /home/max/server/student/framework/web/CWebApplication.php(282): CController->run('')
+#8 /home/max/server/student/framework/web/CWebApplication.php(141): CWebApplication->runController('lk')
+#9 /home/max/server/student/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#10 /home/max/server/student/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/index.php?r=lk
+---
+2017/04/14 20:58:33 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'student.subjects' doesn't exist. The SQL statement executed was: select * from subjects where id in(select subject_id from post where user_id = 2).
+in /home/max/server/student/protected/modules/lk/controllers/SubjectController.php (125)
+in /home/max/server/student/index.php (13)
+2017/04/14 20:58:33 [error] [exception.CDbException] CDbException: CDbCommand failed to execute the SQL statement: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'student.subjects' doesn't exist. The SQL statement executed was: select * from subjects where id in(select subject_id from post where user_id = 2) in /home/max/server/student/framework/db/CDbCommand.php:543
+Stack trace:
+#0 /home/max/server/student/framework/db/CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 /home/max/server/student/framework/db/ar/CActiveRecord.php(1586): CDbCommand->queryAll()
+#2 /home/max/server/student/protected/modules/lk/controllers/SubjectController.php(125): CActiveRecord->findAllBySql('select * from s...')
+#3 /home/max/server/student/framework/web/actions/CInlineAction.php(49): SubjectController->actionIndex()
+#4 /home/max/server/student/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /home/max/server/student/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /home/max/server/student/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /home/max/server/student/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /home/max/server/student/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /home/max/server/student/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /home/max/server/student/framework/web/CController.php(291): CFilterChain->run()
+#11 /home/max/server/student/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /home/max/server/student/framework/web/CWebApplication.php(282): CController->run('')
+#13 /home/max/server/student/framework/web/CWebApplication.php(141): CWebApplication->runController('lk/subject')
+#14 /home/max/server/student/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#15 /home/max/server/student/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php?r=lk/subject
+HTTP_REFERER=http://student/index.php?r=lk/post
+---
+2017/04/14 20:58:33 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'student.subjects' doesn't exist. The SQL statement executed was: select * from subjects where id in(select subject_id from post where user_id = 2).
+in /home/max/server/student/protected/modules/lk/controllers/SubjectController.php (125)
+in /home/max/server/student/index.php (13)
+2017/04/14 20:58:33 [error] [exception.CDbException] CDbException: CDbCommand failed to execute the SQL statement: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'student.subjects' doesn't exist. The SQL statement executed was: select * from subjects where id in(select subject_id from post where user_id = 2) in /home/max/server/student/framework/db/CDbCommand.php:543
+Stack trace:
+#0 /home/max/server/student/framework/db/CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 /home/max/server/student/framework/db/ar/CActiveRecord.php(1586): CDbCommand->queryAll()
+#2 /home/max/server/student/protected/modules/lk/controllers/SubjectController.php(125): CActiveRecord->findAllBySql('select * from s...')
+#3 /home/max/server/student/framework/web/actions/CInlineAction.php(49): SubjectController->actionIndex()
+#4 /home/max/server/student/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /home/max/server/student/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /home/max/server/student/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /home/max/server/student/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /home/max/server/student/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /home/max/server/student/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /home/max/server/student/framework/web/CController.php(291): CFilterChain->run()
+#11 /home/max/server/student/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /home/max/server/student/framework/web/CWebApplication.php(282): CController->run('')
+#13 /home/max/server/student/framework/web/CWebApplication.php(141): CWebApplication->runController('lk/subject')
+#14 /home/max/server/student/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#15 /home/max/server/student/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php?r=lk/subject
+HTTP_REFERER=http://student/index.php?r=lk/post
+---
+2017/04/14 20:59:02 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'student.subjects' doesn't exist. The SQL statement executed was: select * from subjects where id in(select subject_id from post where user_id = 2).
+in /home/max/server/student/protected/modules/lk/controllers/SubjectController.php (125)
+in /home/max/server/student/index.php (13)
+2017/04/14 20:59:02 [error] [exception.CDbException] CDbException: CDbCommand failed to execute the SQL statement: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'student.subjects' doesn't exist. The SQL statement executed was: select * from subjects where id in(select subject_id from post where user_id = 2) in /home/max/server/student/framework/db/CDbCommand.php:543
+Stack trace:
+#0 /home/max/server/student/framework/db/CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 /home/max/server/student/framework/db/ar/CActiveRecord.php(1586): CDbCommand->queryAll()
+#2 /home/max/server/student/protected/modules/lk/controllers/SubjectController.php(125): CActiveRecord->findAllBySql('select * from s...')
+#3 /home/max/server/student/framework/web/actions/CInlineAction.php(49): SubjectController->actionIndex()
+#4 /home/max/server/student/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /home/max/server/student/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /home/max/server/student/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /home/max/server/student/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /home/max/server/student/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /home/max/server/student/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /home/max/server/student/framework/web/CController.php(291): CFilterChain->run()
+#11 /home/max/server/student/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /home/max/server/student/framework/web/CWebApplication.php(282): CController->run('')
+#13 /home/max/server/student/framework/web/CWebApplication.php(141): CWebApplication->runController('lk/subject')
+#14 /home/max/server/student/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#15 /home/max/server/student/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php?r=lk/subject
+HTTP_REFERER=http://student/index.php?r=lk/post
+---
+2017/04/14 20:59:20 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'student.subjects' doesn't exist. The SQL statement executed was: select * from subjects where id in(select subject_id from post where user_id = 2).
+in /home/max/server/student/protected/modules/lk/controllers/SubjectController.php (125)
+in /home/max/server/student/index.php (13)
+2017/04/14 20:59:20 [error] [exception.CDbException] CDbException: CDbCommand failed to execute the SQL statement: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'student.subjects' doesn't exist. The SQL statement executed was: select * from subjects where id in(select subject_id from post where user_id = 2) in /home/max/server/student/framework/db/CDbCommand.php:543
+Stack trace:
+#0 /home/max/server/student/framework/db/CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 /home/max/server/student/framework/db/ar/CActiveRecord.php(1586): CDbCommand->queryAll()
+#2 /home/max/server/student/protected/modules/lk/controllers/SubjectController.php(125): CActiveRecord->findAllBySql('select * from s...')
+#3 /home/max/server/student/framework/web/actions/CInlineAction.php(49): SubjectController->actionIndex()
+#4 /home/max/server/student/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /home/max/server/student/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /home/max/server/student/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /home/max/server/student/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /home/max/server/student/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /home/max/server/student/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /home/max/server/student/framework/web/CController.php(291): CFilterChain->run()
+#11 /home/max/server/student/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /home/max/server/student/framework/web/CWebApplication.php(282): CController->run('')
+#13 /home/max/server/student/framework/web/CWebApplication.php(141): CWebApplication->runController('lk/subject')
+#14 /home/max/server/student/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#15 /home/max/server/student/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php?r=lk/subject
+HTTP_REFERER=http://student/index.php?r=lk/post
+---
+2017/04/14 20:59:21 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'student.subjects' doesn't exist. The SQL statement executed was: select * from subjects where id in(select subject_id from post where user_id = 2).
+in /home/max/server/student/protected/modules/lk/controllers/SubjectController.php (125)
+in /home/max/server/student/index.php (13)
+2017/04/14 20:59:21 [error] [exception.CDbException] CDbException: CDbCommand failed to execute the SQL statement: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'student.subjects' doesn't exist. The SQL statement executed was: select * from subjects where id in(select subject_id from post where user_id = 2) in /home/max/server/student/framework/db/CDbCommand.php:543
+Stack trace:
+#0 /home/max/server/student/framework/db/CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 /home/max/server/student/framework/db/ar/CActiveRecord.php(1586): CDbCommand->queryAll()
+#2 /home/max/server/student/protected/modules/lk/controllers/SubjectController.php(125): CActiveRecord->findAllBySql('select * from s...')
+#3 /home/max/server/student/framework/web/actions/CInlineAction.php(49): SubjectController->actionIndex()
+#4 /home/max/server/student/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /home/max/server/student/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /home/max/server/student/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /home/max/server/student/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /home/max/server/student/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /home/max/server/student/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /home/max/server/student/framework/web/CController.php(291): CFilterChain->run()
+#11 /home/max/server/student/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /home/max/server/student/framework/web/CWebApplication.php(282): CController->run('')
+#13 /home/max/server/student/framework/web/CWebApplication.php(141): CWebApplication->runController('lk/subject')
+#14 /home/max/server/student/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#15 /home/max/server/student/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php?r=lk/subject
+HTTP_REFERER=http://student/index.php?r=lk/post
+---
+2017/04/14 20:59:22 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'student.subjects' doesn't exist. The SQL statement executed was: select * from subjects where id in(select subject_id from post where user_id = 2).
+in /home/max/server/student/protected/modules/lk/controllers/SubjectController.php (125)
+in /home/max/server/student/index.php (13)
+2017/04/14 20:59:22 [error] [exception.CDbException] CDbException: CDbCommand failed to execute the SQL statement: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'student.subjects' doesn't exist. The SQL statement executed was: select * from subjects where id in(select subject_id from post where user_id = 2) in /home/max/server/student/framework/db/CDbCommand.php:543
+Stack trace:
+#0 /home/max/server/student/framework/db/CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 /home/max/server/student/framework/db/ar/CActiveRecord.php(1586): CDbCommand->queryAll()
+#2 /home/max/server/student/protected/modules/lk/controllers/SubjectController.php(125): CActiveRecord->findAllBySql('select * from s...')
+#3 /home/max/server/student/framework/web/actions/CInlineAction.php(49): SubjectController->actionIndex()
+#4 /home/max/server/student/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /home/max/server/student/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /home/max/server/student/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /home/max/server/student/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /home/max/server/student/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /home/max/server/student/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /home/max/server/student/framework/web/CController.php(291): CFilterChain->run()
+#11 /home/max/server/student/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /home/max/server/student/framework/web/CWebApplication.php(282): CController->run('')
+#13 /home/max/server/student/framework/web/CWebApplication.php(141): CWebApplication->runController('lk/subject')
+#14 /home/max/server/student/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#15 /home/max/server/student/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php?r=lk/subject
+HTTP_REFERER=http://student/index.php?r=lk/post
+---
+2017/04/14 20:59:25 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'student.subjects' doesn't exist. The SQL statement executed was: select * from subjects where id in(select subject_id from post where user_id = 2).
+in /home/max/server/student/protected/modules/lk/controllers/SubjectController.php (125)
+in /home/max/server/student/index.php (13)
+2017/04/14 20:59:25 [error] [exception.CDbException] CDbException: CDbCommand failed to execute the SQL statement: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'student.subjects' doesn't exist. The SQL statement executed was: select * from subjects where id in(select subject_id from post where user_id = 2) in /home/max/server/student/framework/db/CDbCommand.php:543
+Stack trace:
+#0 /home/max/server/student/framework/db/CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 /home/max/server/student/framework/db/ar/CActiveRecord.php(1586): CDbCommand->queryAll()
+#2 /home/max/server/student/protected/modules/lk/controllers/SubjectController.php(125): CActiveRecord->findAllBySql('select * from s...')
+#3 /home/max/server/student/framework/web/actions/CInlineAction.php(49): SubjectController->actionIndex()
+#4 /home/max/server/student/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /home/max/server/student/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /home/max/server/student/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /home/max/server/student/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /home/max/server/student/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /home/max/server/student/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /home/max/server/student/framework/web/CController.php(291): CFilterChain->run()
+#11 /home/max/server/student/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /home/max/server/student/framework/web/CWebApplication.php(282): CController->run('')
+#13 /home/max/server/student/framework/web/CWebApplication.php(141): CWebApplication->runController('lk/subject')
+#14 /home/max/server/student/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#15 /home/max/server/student/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php?r=lk/subject
+HTTP_REFERER=http://student/index.php?r=lk/post
+---
+2017/04/14 20:59:26 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'student.subjects' doesn't exist. The SQL statement executed was: select * from subjects where id in(select subject_id from post where user_id = 2).
+in /home/max/server/student/protected/modules/lk/controllers/SubjectController.php (125)
+in /home/max/server/student/index.php (13)
+2017/04/14 20:59:26 [error] [exception.CDbException] CDbException: CDbCommand failed to execute the SQL statement: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'student.subjects' doesn't exist. The SQL statement executed was: select * from subjects where id in(select subject_id from post where user_id = 2) in /home/max/server/student/framework/db/CDbCommand.php:543
+Stack trace:
+#0 /home/max/server/student/framework/db/CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 /home/max/server/student/framework/db/ar/CActiveRecord.php(1586): CDbCommand->queryAll()
+#2 /home/max/server/student/protected/modules/lk/controllers/SubjectController.php(125): CActiveRecord->findAllBySql('select * from s...')
+#3 /home/max/server/student/framework/web/actions/CInlineAction.php(49): SubjectController->actionIndex()
+#4 /home/max/server/student/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /home/max/server/student/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /home/max/server/student/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /home/max/server/student/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /home/max/server/student/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /home/max/server/student/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /home/max/server/student/framework/web/CController.php(291): CFilterChain->run()
+#11 /home/max/server/student/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /home/max/server/student/framework/web/CWebApplication.php(282): CController->run('')
+#13 /home/max/server/student/framework/web/CWebApplication.php(141): CWebApplication->runController('lk/subject')
+#14 /home/max/server/student/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#15 /home/max/server/student/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php?r=lk/subject
+HTTP_REFERER=http://student/index.php?r=lk/post
+---
+2017/04/14 20:59:26 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'student.subjects' doesn't exist. The SQL statement executed was: select * from subjects where id in(select subject_id from post where user_id = 2).
+in /home/max/server/student/protected/modules/lk/controllers/SubjectController.php (125)
+in /home/max/server/student/index.php (13)
+2017/04/14 20:59:26 [error] [exception.CDbException] CDbException: CDbCommand failed to execute the SQL statement: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'student.subjects' doesn't exist. The SQL statement executed was: select * from subjects where id in(select subject_id from post where user_id = 2) in /home/max/server/student/framework/db/CDbCommand.php:543
+Stack trace:
+#0 /home/max/server/student/framework/db/CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 /home/max/server/student/framework/db/ar/CActiveRecord.php(1586): CDbCommand->queryAll()
+#2 /home/max/server/student/protected/modules/lk/controllers/SubjectController.php(125): CActiveRecord->findAllBySql('select * from s...')
+#3 /home/max/server/student/framework/web/actions/CInlineAction.php(49): SubjectController->actionIndex()
+#4 /home/max/server/student/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /home/max/server/student/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /home/max/server/student/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /home/max/server/student/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /home/max/server/student/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /home/max/server/student/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /home/max/server/student/framework/web/CController.php(291): CFilterChain->run()
+#11 /home/max/server/student/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /home/max/server/student/framework/web/CWebApplication.php(282): CController->run('')
+#13 /home/max/server/student/framework/web/CWebApplication.php(141): CWebApplication->runController('lk/subject')
+#14 /home/max/server/student/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#15 /home/max/server/student/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php?r=lk/subject
+HTTP_REFERER=http://student/index.php?r=lk/post
+---
+2017/04/14 20:59:27 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'student.subjects' doesn't exist. The SQL statement executed was: select * from subjects where id in(select subject_id from post where user_id = 2).
+in /home/max/server/student/protected/modules/lk/controllers/SubjectController.php (125)
+in /home/max/server/student/index.php (13)
+2017/04/14 20:59:27 [error] [exception.CDbException] CDbException: CDbCommand failed to execute the SQL statement: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'student.subjects' doesn't exist. The SQL statement executed was: select * from subjects where id in(select subject_id from post where user_id = 2) in /home/max/server/student/framework/db/CDbCommand.php:543
+Stack trace:
+#0 /home/max/server/student/framework/db/CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 /home/max/server/student/framework/db/ar/CActiveRecord.php(1586): CDbCommand->queryAll()
+#2 /home/max/server/student/protected/modules/lk/controllers/SubjectController.php(125): CActiveRecord->findAllBySql('select * from s...')
+#3 /home/max/server/student/framework/web/actions/CInlineAction.php(49): SubjectController->actionIndex()
+#4 /home/max/server/student/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /home/max/server/student/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /home/max/server/student/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /home/max/server/student/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /home/max/server/student/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /home/max/server/student/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /home/max/server/student/framework/web/CController.php(291): CFilterChain->run()
+#11 /home/max/server/student/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /home/max/server/student/framework/web/CWebApplication.php(282): CController->run('')
+#13 /home/max/server/student/framework/web/CWebApplication.php(141): CWebApplication->runController('lk/subject')
+#14 /home/max/server/student/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#15 /home/max/server/student/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php?r=lk/subject
+HTTP_REFERER=http://student/index.php?r=lk/post
+---
+2017/04/14 20:59:27 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'student.subjects' doesn't exist. The SQL statement executed was: select * from subjects where id in(select subject_id from post where user_id = 2).
+in /home/max/server/student/protected/modules/lk/controllers/SubjectController.php (125)
+in /home/max/server/student/index.php (13)
+2017/04/14 20:59:27 [error] [exception.CDbException] CDbException: CDbCommand failed to execute the SQL statement: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'student.subjects' doesn't exist. The SQL statement executed was: select * from subjects where id in(select subject_id from post where user_id = 2) in /home/max/server/student/framework/db/CDbCommand.php:543
+Stack trace:
+#0 /home/max/server/student/framework/db/CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 /home/max/server/student/framework/db/ar/CActiveRecord.php(1586): CDbCommand->queryAll()
+#2 /home/max/server/student/protected/modules/lk/controllers/SubjectController.php(125): CActiveRecord->findAllBySql('select * from s...')
+#3 /home/max/server/student/framework/web/actions/CInlineAction.php(49): SubjectController->actionIndex()
+#4 /home/max/server/student/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /home/max/server/student/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /home/max/server/student/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /home/max/server/student/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /home/max/server/student/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /home/max/server/student/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /home/max/server/student/framework/web/CController.php(291): CFilterChain->run()
+#11 /home/max/server/student/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /home/max/server/student/framework/web/CWebApplication.php(282): CController->run('')
+#13 /home/max/server/student/framework/web/CWebApplication.php(141): CWebApplication->runController('lk/subject')
+#14 /home/max/server/student/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#15 /home/max/server/student/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php?r=lk/subject
+HTTP_REFERER=http://student/index.php?r=lk/post
+---
+2017/04/16 11:43:35 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1. The SQL statement executed was: select * from subject where id in (select subject_id from post where user_id = ).
+in /home/max/server/student/protected/modules/lk/controllers/DefaultController.php (17)
+in /home/max/server/student/index.php (13)
+2017/04/16 11:43:35 [error] [exception.CDbException] CDbException: CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1. The SQL statement executed was: select * from subject where id in (select subject_id from post where user_id = ) in /home/max/server/student/framework/db/CDbCommand.php:543
+Stack trace:
+#0 /home/max/server/student/framework/db/CDbCommand.php(396): CDbCommand->queryInternal('fetchAll', Array, Array)
+#1 /home/max/server/student/framework/db/ar/CActiveRecord.php(1586): CDbCommand->queryAll()
+#2 /home/max/server/student/protected/modules/lk/controllers/DefaultController.php(17): CActiveRecord->findAllBySql('select * from s...')
+#3 /home/max/server/student/framework/web/actions/CInlineAction.php(49): DefaultController->actionIndex()
+#4 /home/max/server/student/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /home/max/server/student/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#6 /home/max/server/student/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 /home/max/server/student/framework/web/CWebApplication.php(282): CController->run('')
+#8 /home/max/server/student/framework/web/CWebApplication.php(141): CWebApplication->runController('lk')
+#9 /home/max/server/student/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#10 /home/max/server/student/index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/index.php?r=lk
+---
+2017/04/18 13:20:58 [error] [exception.CHttpException.404] CHttpException: The system is unable to find the requested action "create". in /home/max/server/student/framework/web/CController.php:483
+Stack trace:
+#0 /home/max/server/student/framework/web/CController.php(270): CController->missingAction('create')
+#1 /home/max/server/student/framework/web/CWebApplication.php(282): CController->run('create')
+#2 /home/max/server/student/framework/web/CWebApplication.php(141): CWebApplication->runController('post/create')
+#3 /home/max/server/student/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#4 /home/max/server/student/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php?r=post/create
+HTTP_REFERER=http://student/index.php
+---
+2017/04/18 14:59:12 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[HY000]: General error: 1364 Field 'user_id' doesn't have a default value. The SQL statement executed was: INSERT INTO `post` (`subject_id`, `head`, `body`) VALUES (:yp0, :yp1, :yp2).
+in /home/max/server/student/protected/controllers/PostController.php (60)
+in /home/max/server/student/index.php (13)
+2017/04/18 14:59:12 [error] [exception.CDbException] CDbException: CDbCommand failed to execute the SQL statement: SQLSTATE[HY000]: General error: 1364 Field 'user_id' doesn't have a default value. The SQL statement executed was: INSERT INTO `post` (`subject_id`, `head`, `body`) VALUES (:yp0, :yp1, :yp2) in /home/max/server/student/framework/db/CDbCommand.php:358
+Stack trace:
+#0 /home/max/server/student/framework/db/ar/CActiveRecord.php(1080): CDbCommand->execute()
+#1 /home/max/server/student/framework/db/ar/CActiveRecord.php(809): CActiveRecord->insert(NULL)
+#2 /home/max/server/student/protected/controllers/PostController.php(60): CActiveRecord->save()
+#3 /home/max/server/student/framework/web/actions/CInlineAction.php(49): PostController->actionCreate()
+#4 /home/max/server/student/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /home/max/server/student/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /home/max/server/student/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /home/max/server/student/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /home/max/server/student/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /home/max/server/student/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /home/max/server/student/framework/web/CController.php(291): CFilterChain->run()
+#11 /home/max/server/student/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /home/max/server/student/framework/web/CWebApplication.php(282): CController->run('create')
+#13 /home/max/server/student/framework/web/CWebApplication.php(141): CWebApplication->runController('post/create')
+#14 /home/max/server/student/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#15 /home/max/server/student/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php?r=post/create
+HTTP_REFERER=http://student/index.php?r=post/create
+---
+2017/04/18 15:33:05 [error] [exception.CHttpException.400] CHttpException: Your request is invalid. in /home/max/server/student/framework/web/CController.php:336
+Stack trace:
+#0 /home/max/server/student/framework/web/CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 /home/max/server/student/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 /home/max/server/student/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#3 /home/max/server/student/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 /home/max/server/student/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 /home/max/server/student/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 /home/max/server/student/framework/web/CController.php(291): CFilterChain->run()
+#7 /home/max/server/student/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /home/max/server/student/framework/web/CWebApplication.php(282): CController->run('update')
+#9 /home/max/server/student/framework/web/CWebApplication.php(141): CWebApplication->runController('user/update')
+#10 /home/max/server/student/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#11 /home/max/server/student/index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/index.php?r=user/update
+HTTP_REFERER=http://student/index.php?r=user/update&id=2
+---
+2017/04/18 15:34:18 [error] [exception.CHttpException.400] CHttpException: Your request is invalid. in /home/max/server/student/framework/web/CController.php:336
+Stack trace:
+#0 /home/max/server/student/framework/web/CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 /home/max/server/student/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 /home/max/server/student/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#3 /home/max/server/student/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 /home/max/server/student/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 /home/max/server/student/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 /home/max/server/student/framework/web/CController.php(291): CFilterChain->run()
+#7 /home/max/server/student/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /home/max/server/student/framework/web/CWebApplication.php(282): CController->run('update')
+#9 /home/max/server/student/framework/web/CWebApplication.php(141): CWebApplication->runController('user/update')
+#10 /home/max/server/student/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#11 /home/max/server/student/index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/index.php?r=user/update
+HTTP_REFERER=http://student/index.php?r=user/update&id=2
+---
+2017/04/18 15:35:31 [error] [exception.CHttpException.400] CHttpException: Your request is invalid. in /home/max/server/student/framework/web/CController.php:336
+Stack trace:
+#0 /home/max/server/student/framework/web/CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 /home/max/server/student/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 /home/max/server/student/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#3 /home/max/server/student/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 /home/max/server/student/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 /home/max/server/student/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 /home/max/server/student/framework/web/CController.php(291): CFilterChain->run()
+#7 /home/max/server/student/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /home/max/server/student/framework/web/CWebApplication.php(282): CController->run('update')
+#9 /home/max/server/student/framework/web/CWebApplication.php(141): CWebApplication->runController('user/update')
+#10 /home/max/server/student/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#11 /home/max/server/student/index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/index.php?r=user/update
+HTTP_REFERER=http://student/index.php?r=user/update&id=2
+---
+2017/04/18 15:36:16 [error] [exception.CHttpException.400] CHttpException: Your request is invalid. in /home/max/server/student/framework/web/CController.php:336
+Stack trace:
+#0 /home/max/server/student/framework/web/CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 /home/max/server/student/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 /home/max/server/student/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#3 /home/max/server/student/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 /home/max/server/student/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 /home/max/server/student/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 /home/max/server/student/framework/web/CController.php(291): CFilterChain->run()
+#7 /home/max/server/student/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 /home/max/server/student/framework/web/CWebApplication.php(282): CController->run('update')
+#9 /home/max/server/student/framework/web/CWebApplication.php(141): CWebApplication->runController('user/update')
+#10 /home/max/server/student/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#11 /home/max/server/student/index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/index.php?r=user/update
+HTTP_REFERER=http://student/index.php?r=user/update&id=2
+---
+2017/04/18 15:36:22 [error] [php] Undefined index: User[email] (/home/max/server/student/protected/controllers/UserController.php:80)
+Stack trace:
+#0 /home/max/server/student/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#1 /home/max/server/student/framework/web/CController.php(308): CInlineAction->runWithParams()
+#2 /home/max/server/student/framework/web/filters/CFilterChain.php(133): UserController->runAction()
+#3 /home/max/server/student/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#4 /home/max/server/student/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#5 /home/max/server/student/framework/web/filters/CInlineFilter.php(58): UserController->filterAccessControl()
+#6 /home/max/server/student/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#7 /home/max/server/student/framework/web/CController.php(291): CFilterChain->run()
+#8 /home/max/server/student/framework/web/CController.php(265): UserController->runActionWithFilters()
+#9 /home/max/server/student/framework/web/CWebApplication.php(282): UserController->run()
+#10 /home/max/server/student/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#11 /home/max/server/student/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#12 /home/max/server/student/index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php?r=user/update&id=2
+in /home/max/server/student/protected/controllers/UserController.php (80)
+in /home/max/server/student/index.php (13)
+2017/04/18 15:40:20 [warning] [application] Failed to set unsafe attribute "info" of "User".
+in /home/max/server/student/protected/controllers/UserController.php (80)
+in /home/max/server/student/index.php (13)
+2017/04/18 15:42:19 [warning] [application] Failed to set unsafe attribute "info" of "User".
+in /home/max/server/student/protected/controllers/UserController.php (80)
+in /home/max/server/student/index.php (13)
+2017/04/18 15:43:27 [warning] [application] Failed to set unsafe attribute "info" of "User".
+in /home/max/server/student/protected/controllers/UserController.php (80)
+in /home/max/server/student/index.php (13)
+2017/04/18 16:06:52 [error] [php] Undefined index: image (/home/max/server/student/protected/controllers/UserController.php:83)
+Stack trace:
+#0 /home/max/server/student/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#1 /home/max/server/student/framework/web/CController.php(308): CInlineAction->runWithParams()
+#2 /home/max/server/student/framework/web/filters/CFilterChain.php(133): UserController->runAction()
+#3 /home/max/server/student/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#4 /home/max/server/student/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#5 /home/max/server/student/framework/web/filters/CInlineFilter.php(58): UserController->filterAccessControl()
+#6 /home/max/server/student/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#7 /home/max/server/student/framework/web/CController.php(291): CFilterChain->run()
+#8 /home/max/server/student/framework/web/CController.php(265): UserController->runActionWithFilters()
+#9 /home/max/server/student/framework/web/CWebApplication.php(282): UserController->run()
+#10 /home/max/server/student/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#11 /home/max/server/student/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#12 /home/max/server/student/index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php?r=user/update&id=2
+in /home/max/server/student/protected/controllers/UserController.php (83)
+in /home/max/server/student/index.php (13)
+2017/04/18 16:07:46 [error] [php] Undefined index: image (/home/max/server/student/protected/controllers/UserController.php:83)
+Stack trace:
+#0 /home/max/server/student/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#1 /home/max/server/student/framework/web/CController.php(308): CInlineAction->runWithParams()
+#2 /home/max/server/student/framework/web/filters/CFilterChain.php(133): UserController->runAction()
+#3 /home/max/server/student/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#4 /home/max/server/student/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#5 /home/max/server/student/framework/web/filters/CInlineFilter.php(58): UserController->filterAccessControl()
+#6 /home/max/server/student/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#7 /home/max/server/student/framework/web/CController.php(291): CFilterChain->run()
+#8 /home/max/server/student/framework/web/CController.php(265): UserController->runActionWithFilters()
+#9 /home/max/server/student/framework/web/CWebApplication.php(282): UserController->run()
+#10 /home/max/server/student/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#11 /home/max/server/student/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#12 /home/max/server/student/index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php?r=user/update&id=2
+in /home/max/server/student/protected/controllers/UserController.php (83)
+in /home/max/server/student/index.php (13)
+2017/04/18 16:07:59 [error] [php] Undefined index: image (/home/max/server/student/protected/controllers/UserController.php:83)
+Stack trace:
+#0 /home/max/server/student/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#1 /home/max/server/student/framework/web/CController.php(308): CInlineAction->runWithParams()
+#2 /home/max/server/student/framework/web/filters/CFilterChain.php(133): UserController->runAction()
+#3 /home/max/server/student/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#4 /home/max/server/student/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#5 /home/max/server/student/framework/web/filters/CInlineFilter.php(58): UserController->filterAccessControl()
+#6 /home/max/server/student/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#7 /home/max/server/student/framework/web/CController.php(291): CFilterChain->run()
+#8 /home/max/server/student/framework/web/CController.php(265): UserController->runActionWithFilters()
+#9 /home/max/server/student/framework/web/CWebApplication.php(282): UserController->run()
+#10 /home/max/server/student/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#11 /home/max/server/student/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#12 /home/max/server/student/index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php?r=user/update&id=2
+in /home/max/server/student/protected/controllers/UserController.php (83)
+in /home/max/server/student/index.php (13)
+2017/04/18 17:39:50 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "moderator/subjects/index". in /home/max/server/student/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/max/server/student/framework/web/CWebApplication.php(141): CWebApplication->runController('moderator/subje...')
+#1 /home/max/server/student/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /home/max/server/student/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php?r=moderator/subjects/index
+HTTP_REFERER=http://student/index.php?r=moderator
+---
+2017/04/18 17:40:01 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "moderator/subjects/index". in /home/max/server/student/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/max/server/student/framework/web/CWebApplication.php(141): CWebApplication->runController('moderator/subje...')
+#1 /home/max/server/student/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /home/max/server/student/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php?r=moderator/subjects/index
+HTTP_REFERER=http://student/index.php?r=moderator
+---
+2017/04/18 17:40:05 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "moderator/subjects". in /home/max/server/student/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/max/server/student/framework/web/CWebApplication.php(141): CWebApplication->runController('moderator/subje...')
+#1 /home/max/server/student/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /home/max/server/student/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php?r=moderator/subjects
+HTTP_REFERER=http://student/index.php?r=moderator
+---
+2017/04/18 18:12:18 [error] [php] Undefined variable: subjects (/home/max/server/student/protected/modules/moderator/views/post/index.php:22)
+Stack trace:
+#0 /home/max/server/student/framework/web/CController.php(869): PostController->renderFile()
+#1 /home/max/server/student/framework/web/CController.php(782): PostController->renderPartial()
+#2 /home/max/server/student/protected/modules/moderator/controllers/PostController.php(129): PostController->render()
+#3 /home/max/server/student/framework/web/actions/CInlineAction.php(49): PostController->actionIndex()
+#4 /home/max/server/student/framework/web/CController.php(308): CInlineAction->runWithParams()
+#5 /home/max/server/student/framework/web/filters/CFilterChain.php(133): PostController->runAction()
+#6 /home/max/server/student/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /home/max/server/student/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#8 /home/max/server/student/framework/web/filters/CInlineFilter.php(58): PostController->filterAccessControl()
+#9 /home/max/server/student/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#10 /home/max/server/student/framework/web/CController.php(291): CFilterChain->run()
+#11 /home/max/server/student/framework/web/CController.php(265): PostController->runActionWithFilters()
+#12 /home/max/server/student/framework/web/CWebApplication.php(282): PostController->run()
+#13 /home/max/server/student/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#14 /home/max/server/student/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#15 /home/max/server/student/index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php?r=moderator/post
+in /home/max/server/student/protected/modules/moderator/views/post/index.php (22)
+in /home/max/server/student/protected/modules/moderator/controllers/PostController.php (129)
+in /home/max/server/student/index.php (13)
+2017/04/18 18:30:44 [error] [php] Undefined variable: posts (/home/max/server/student/protected/modules/moderator/views/post/view.php:33)
+Stack trace:
+#0 /home/max/server/student/framework/web/CController.php(869): PostController->renderFile()
+#1 /home/max/server/student/framework/web/CController.php(782): PostController->renderPartial()
+#2 /home/max/server/student/protected/modules/moderator/controllers/PostController.php(57): PostController->render()
+#3 unknown(0): PostController->actionView()
+#4 /home/max/server/student/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs()
+#5 /home/max/server/student/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#6 /home/max/server/student/framework/web/CController.php(308): CInlineAction->runWithParams()
+#7 /home/max/server/student/framework/web/filters/CFilterChain.php(133): PostController->runAction()
+#8 /home/max/server/student/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#9 /home/max/server/student/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#10 /home/max/server/student/framework/web/filters/CInlineFilter.php(58): PostController->filterAccessControl()
+#11 /home/max/server/student/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#12 /home/max/server/student/framework/web/CController.php(291): CFilterChain->run()
+#13 /home/max/server/student/framework/web/CController.php(265): PostController->runActionWithFilters()
+#14 /home/max/server/student/framework/web/CWebApplication.php(282): PostController->run()
+#15 /home/max/server/student/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#16 /home/max/server/student/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#17 /home/max/server/student/index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php?r=moderator/post/view&id=1
+in /home/max/server/student/protected/modules/moderator/views/post/view.php (33)
+in /home/max/server/student/protected/modules/moderator/controllers/PostController.php (57)
+in /home/max/server/student/index.php (13)
+2017/04/18 18:32:59 [error] [php] Undefined variable: posts (/home/max/server/student/protected/modules/moderator/views/post/view.php:31)
+Stack trace:
+#0 /home/max/server/student/framework/web/CController.php(869): PostController->renderFile()
+#1 /home/max/server/student/framework/web/CController.php(782): PostController->renderPartial()
+#2 /home/max/server/student/protected/modules/moderator/controllers/PostController.php(57): PostController->render()
+#3 unknown(0): PostController->actionView()
+#4 /home/max/server/student/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs()
+#5 /home/max/server/student/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#6 /home/max/server/student/framework/web/CController.php(308): CInlineAction->runWithParams()
+#7 /home/max/server/student/framework/web/filters/CFilterChain.php(133): PostController->runAction()
+#8 /home/max/server/student/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#9 /home/max/server/student/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#10 /home/max/server/student/framework/web/filters/CInlineFilter.php(58): PostController->filterAccessControl()
+#11 /home/max/server/student/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#12 /home/max/server/student/framework/web/CController.php(291): CFilterChain->run()
+#13 /home/max/server/student/framework/web/CController.php(265): PostController->runActionWithFilters()
+#14 /home/max/server/student/framework/web/CWebApplication.php(282): PostController->run()
+#15 /home/max/server/student/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#16 /home/max/server/student/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#17 /home/max/server/student/index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php?r=moderator/post/view&id=1
+in /home/max/server/student/protected/modules/moderator/views/post/view.php (31)
+in /home/max/server/student/protected/modules/moderator/controllers/PostController.php (57)
+in /home/max/server/student/index.php (13)
+2017/04/18 18:33:00 [error] [php] Undefined variable: posts (/home/max/server/student/protected/modules/moderator/views/post/view.php:31)
+Stack trace:
+#0 /home/max/server/student/framework/web/CController.php(869): PostController->renderFile()
+#1 /home/max/server/student/framework/web/CController.php(782): PostController->renderPartial()
+#2 /home/max/server/student/protected/modules/moderator/controllers/PostController.php(57): PostController->render()
+#3 unknown(0): PostController->actionView()
+#4 /home/max/server/student/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs()
+#5 /home/max/server/student/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#6 /home/max/server/student/framework/web/CController.php(308): CInlineAction->runWithParams()
+#7 /home/max/server/student/framework/web/filters/CFilterChain.php(133): PostController->runAction()
+#8 /home/max/server/student/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#9 /home/max/server/student/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#10 /home/max/server/student/framework/web/filters/CInlineFilter.php(58): PostController->filterAccessControl()
+#11 /home/max/server/student/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#12 /home/max/server/student/framework/web/CController.php(291): CFilterChain->run()
+#13 /home/max/server/student/framework/web/CController.php(265): PostController->runActionWithFilters()
+#14 /home/max/server/student/framework/web/CWebApplication.php(282): PostController->run()
+#15 /home/max/server/student/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#16 /home/max/server/student/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#17 /home/max/server/student/index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php?r=moderator/post/view&id=1
+in /home/max/server/student/protected/modules/moderator/views/post/view.php (31)
+in /home/max/server/student/protected/modules/moderator/controllers/PostController.php (57)
+in /home/max/server/student/index.php (13)
+2017/04/18 18:33:13 [error] [php] Undefined variable: subject (/home/max/server/student/protected/modules/moderator/views/post/view.php:37)
+Stack trace:
+#0 /home/max/server/student/framework/web/CController.php(869): PostController->renderFile()
+#1 /home/max/server/student/framework/web/CController.php(782): PostController->renderPartial()
+#2 /home/max/server/student/protected/modules/moderator/controllers/PostController.php(57): PostController->render()
+#3 unknown(0): PostController->actionView()
+#4 /home/max/server/student/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs()
+#5 /home/max/server/student/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#6 /home/max/server/student/framework/web/CController.php(308): CInlineAction->runWithParams()
+#7 /home/max/server/student/framework/web/filters/CFilterChain.php(133): PostController->runAction()
+#8 /home/max/server/student/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#9 /home/max/server/student/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#10 /home/max/server/student/framework/web/filters/CInlineFilter.php(58): PostController->filterAccessControl()
+#11 /home/max/server/student/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#12 /home/max/server/student/framework/web/CController.php(291): CFilterChain->run()
+#13 /home/max/server/student/framework/web/CController.php(265): PostController->runActionWithFilters()
+#14 /home/max/server/student/framework/web/CWebApplication.php(282): PostController->run()
+#15 /home/max/server/student/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#16 /home/max/server/student/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#17 /home/max/server/student/index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php?r=moderator/post/view&id=1
+in /home/max/server/student/protected/modules/moderator/views/post/view.php (37)
+in /home/max/server/student/protected/modules/moderator/controllers/PostController.php (57)
+in /home/max/server/student/index.php (13)
+2017/04/18 18:33:13 [error] [php] Undefined variable: subject (/home/max/server/student/protected/modules/moderator/views/post/view.php:37)
+Stack trace:
+#0 /home/max/server/student/framework/web/CController.php(869): PostController->renderFile()
+#1 /home/max/server/student/framework/web/CController.php(782): PostController->renderPartial()
+#2 /home/max/server/student/protected/modules/moderator/controllers/PostController.php(57): PostController->render()
+#3 unknown(0): PostController->actionView()
+#4 /home/max/server/student/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs()
+#5 /home/max/server/student/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#6 /home/max/server/student/framework/web/CController.php(308): CInlineAction->runWithParams()
+#7 /home/max/server/student/framework/web/filters/CFilterChain.php(133): PostController->runAction()
+#8 /home/max/server/student/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#9 /home/max/server/student/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#10 /home/max/server/student/framework/web/filters/CInlineFilter.php(58): PostController->filterAccessControl()
+#11 /home/max/server/student/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#12 /home/max/server/student/framework/web/CController.php(291): CFilterChain->run()
+#13 /home/max/server/student/framework/web/CController.php(265): PostController->runActionWithFilters()
+#14 /home/max/server/student/framework/web/CWebApplication.php(282): PostController->run()
+#15 /home/max/server/student/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#16 /home/max/server/student/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#17 /home/max/server/student/index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php?r=moderator/post/view&id=1
+in /home/max/server/student/protected/modules/moderator/views/post/view.php (37)
+in /home/max/server/student/protected/modules/moderator/controllers/PostController.php (57)
+in /home/max/server/student/index.php (13)
+2017/04/18 18:33:14 [error] [php] Undefined variable: subject (/home/max/server/student/protected/modules/moderator/views/post/view.php:37)
+Stack trace:
+#0 /home/max/server/student/framework/web/CController.php(869): PostController->renderFile()
+#1 /home/max/server/student/framework/web/CController.php(782): PostController->renderPartial()
+#2 /home/max/server/student/protected/modules/moderator/controllers/PostController.php(57): PostController->render()
+#3 unknown(0): PostController->actionView()
+#4 /home/max/server/student/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs()
+#5 /home/max/server/student/framework/web/actions/CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#6 /home/max/server/student/framework/web/CController.php(308): CInlineAction->runWithParams()
+#7 /home/max/server/student/framework/web/filters/CFilterChain.php(133): PostController->runAction()
+#8 /home/max/server/student/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#9 /home/max/server/student/framework/web/CController.php(1145): CAccessControlFilter->filter()
+#10 /home/max/server/student/framework/web/filters/CInlineFilter.php(58): PostController->filterAccessControl()
+#11 /home/max/server/student/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter()
+#12 /home/max/server/student/framework/web/CController.php(291): CFilterChain->run()
+#13 /home/max/server/student/framework/web/CController.php(265): PostController->runActionWithFilters()
+#14 /home/max/server/student/framework/web/CWebApplication.php(282): PostController->run()
+#15 /home/max/server/student/framework/web/CWebApplication.php(141): CWebApplication->runController()
+#16 /home/max/server/student/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#17 /home/max/server/student/index.php(13): CWebApplication->run()
+REQUEST_URI=/index.php?r=moderator/post/view&id=1
+in /home/max/server/student/protected/modules/moderator/views/post/view.php (37)
+in /home/max/server/student/protected/modules/moderator/controllers/PostController.php (57)
+in /home/max/server/student/index.php (13)
+2017/04/18 18:37:01 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "moderator/comment/del". in /home/max/server/student/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/max/server/student/framework/web/CWebApplication.php(141): CWebApplication->runController('moderator/comme...')
+#1 /home/max/server/student/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /home/max/server/student/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php?r=moderator/comment/del&id=2
+HTTP_REFERER=http://student/index.php?r=moderator/post/view&id=1
+---
+2017/04/18 19:05:43 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`student`.`bookmark`, CONSTRAINT `bookmark_ibfk_1` FOREIGN KEY (`post_id`) REFERENCES `post` (`id`)). The SQL statement executed was: DELETE FROM `post` WHERE `post`.`id`=1.
+in /home/max/server/student/protected/modules/moderator/controllers/PostController.php (151)
+in /home/max/server/student/index.php (13)
+2017/04/18 19:05:43 [error] [exception.CDbException] CDbException: CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1451 Cannot delete or update a parent row: a foreign key constraint fails (`student`.`bookmark`, CONSTRAINT `bookmark_ibfk_1` FOREIGN KEY (`post_id`) REFERENCES `post` (`id`)). The SQL statement executed was: DELETE FROM `post` WHERE `post`.`id`=1 in /home/max/server/student/framework/db/CDbCommand.php:358
+Stack trace:
+#0 /home/max/server/student/framework/db/ar/CActiveRecord.php(1807): CDbCommand->execute()
+#1 /home/max/server/student/framework/db/ar/CActiveRecord.php(1227): CActiveRecord->deleteByPk('1')
+#2 /home/max/server/student/protected/modules/moderator/controllers/PostController.php(151): CActiveRecord->delete()
+#3 [internal function]: PostController->actionDel('1')
+#4 /home/max/server/student/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs(Object(PostController), Array)
+#5 /home/max/server/student/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(PostController), Object(ReflectionMethod), Array)
+#6 /home/max/server/student/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#7 /home/max/server/student/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#8 /home/max/server/student/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#9 /home/max/server/student/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#10 /home/max/server/student/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#11 /home/max/server/student/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#12 /home/max/server/student/framework/web/CController.php(291): CFilterChain->run()
+#13 /home/max/server/student/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 /home/max/server/student/framework/web/CWebApplication.php(282): CController->run('del')
+#15 /home/max/server/student/framework/web/CWebApplication.php(141): CWebApplication->runController('moderator/post/...')
+#16 /home/max/server/student/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#17 /home/max/server/student/index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/index.php?r=moderator/post/del&id=1
+HTTP_REFERER=http://student/index.php?r=moderator/post/view&id=1
+---
+2017/04/18 19:08:49 [error] [exception.ParseError] ParseError: syntax error, unexpected '$this' (T_VARIABLE) in /home/max/server/student/protected/modules/moderator/controllers/PostController.php:156
+Stack trace:
+#0 /home/max/server/student/framework/web/CWebApplication.php(338): CWebApplication->createController('view/', Object(ModeratorModule))
+#1 /home/max/server/student/framework/web/CWebApplication.php(276): CWebApplication->createController('post/view/')
+#2 /home/max/server/student/framework/web/CWebApplication.php(141): CWebApplication->runController('moderator/post/...')
+#3 /home/max/server/student/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#4 /home/max/server/student/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php?r=moderator/post/view&id=1
+HTTP_REFERER=http://student/index.php?r=moderator/post/view&id=1
+---
+2017/04/18 19:08:53 [error] [exception.ParseError] ParseError: syntax error, unexpected '$this' (T_VARIABLE) in /home/max/server/student/protected/modules/moderator/controllers/PostController.php:156
+Stack trace:
+#0 /home/max/server/student/framework/web/CWebApplication.php(338): CWebApplication->createController('view/', Object(ModeratorModule))
+#1 /home/max/server/student/framework/web/CWebApplication.php(276): CWebApplication->createController('post/view/')
+#2 /home/max/server/student/framework/web/CWebApplication.php(141): CWebApplication->runController('moderator/post/...')
+#3 /home/max/server/student/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#4 /home/max/server/student/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php?r=moderator/post/view&id=1
+HTTP_REFERER=http://student/index.php?r=moderator/post
+---
+2017/04/18 19:11:27 [error] [exception.CException] CException: Property "CDbCriteria.post_id" is not defined. in /home/max/server/student/framework/base/CComponent.php:173
+Stack trace:
+#0 /home/max/server/student/framework/db/schema/CDbCriteria.php(160): CComponent->__set('post_id', '1')
+#1 /home/max/server/student/framework/db/schema/CDbCommandBuilder.php(588): CDbCriteria->__construct(Array)
+#2 /home/max/server/student/framework/db/ar/CActiveRecord.php(1821): CDbCommandBuilder->createCriteria(Array, Array)
+#3 /home/max/server/student/protected/modules/moderator/controllers/PostController.php(153): CActiveRecord->deleteAll(Array)
+#4 [internal function]: PostController->actionDel('1')
+#5 /home/max/server/student/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs(Object(PostController), Array)
+#6 /home/max/server/student/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(PostController), Object(ReflectionMethod), Array)
+#7 /home/max/server/student/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#8 /home/max/server/student/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#9 /home/max/server/student/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#10 /home/max/server/student/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#11 /home/max/server/student/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#12 /home/max/server/student/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#13 /home/max/server/student/framework/web/CController.php(291): CFilterChain->run()
+#14 /home/max/server/student/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 /home/max/server/student/framework/web/CWebApplication.php(282): CController->run('del')
+#16 /home/max/server/student/framework/web/CWebApplication.php(141): CWebApplication->runController('moderator/post/...')
+#17 /home/max/server/student/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#18 /home/max/server/student/index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/index.php?r=moderator/post/del&id=1
+HTTP_REFERER=http://student/index.php?r=moderator/post/view&id=1
+---
+2017/04/18 19:12:59 [error] [exception.CHttpException.404] CHttpException: The requested page does not exist. in /home/max/server/student/protected/modules/moderator/controllers/PostController.php:177
+Stack trace:
+#0 /home/max/server/student/protected/modules/moderator/controllers/PostController.php(56): PostController->loadModel('1')
+#1 [internal function]: PostController->actionView('1')
+#2 /home/max/server/student/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs(Object(PostController), Array)
+#3 /home/max/server/student/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(PostController), Object(ReflectionMethod), Array)
+#4 /home/max/server/student/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /home/max/server/student/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /home/max/server/student/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /home/max/server/student/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /home/max/server/student/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /home/max/server/student/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /home/max/server/student/framework/web/CController.php(291): CFilterChain->run()
+#11 /home/max/server/student/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /home/max/server/student/framework/web/CWebApplication.php(282): CController->run('view')
+#13 /home/max/server/student/framework/web/CWebApplication.php(141): CWebApplication->runController('moderator/post/...')
+#14 /home/max/server/student/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#15 /home/max/server/student/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php?r=moderator/post/view&id=1
+HTTP_REFERER=http://student/index.php?r=moderator/post
+---
+2017/04/18 19:13:01 [error] [exception.CHttpException.404] CHttpException: The requested page does not exist. in /home/max/server/student/protected/modules/moderator/controllers/PostController.php:177
+Stack trace:
+#0 /home/max/server/student/protected/modules/moderator/controllers/PostController.php(56): PostController->loadModel('1')
+#1 [internal function]: PostController->actionView('1')
+#2 /home/max/server/student/framework/web/actions/CAction.php(109): ReflectionMethod->invokeArgs(Object(PostController), Array)
+#3 /home/max/server/student/framework/web/actions/CInlineAction.php(47): CAction->runWithParamsInternal(Object(PostController), Object(ReflectionMethod), Array)
+#4 /home/max/server/student/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#5 /home/max/server/student/framework/web/filters/CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 /home/max/server/student/framework/web/filters/CFilter.php(40): CFilterChain->run()
+#7 /home/max/server/student/framework/web/CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 /home/max/server/student/framework/web/filters/CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 /home/max/server/student/framework/web/filters/CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 /home/max/server/student/framework/web/CController.php(291): CFilterChain->run()
+#11 /home/max/server/student/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /home/max/server/student/framework/web/CWebApplication.php(282): CController->run('view')
+#13 /home/max/server/student/framework/web/CWebApplication.php(141): CWebApplication->runController('moderator/post/...')
+#14 /home/max/server/student/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#15 /home/max/server/student/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php?r=moderator/post/view&id=1
+HTTP_REFERER=http://student/index.php?r=moderator/post
+---
+2017/04/18 19:46:00 [error] [exception.CHttpException.404] CHttpException: The system is unable to find the requested action "update". in /home/max/server/student/framework/web/CController.php:483
+Stack trace:
+#0 /home/max/server/student/framework/web/CController.php(270): CController->missingAction('update')
+#1 /home/max/server/student/framework/web/CWebApplication.php(282): CController->run('update')
+#2 /home/max/server/student/framework/web/CWebApplication.php(141): CWebApplication->runController('post/update')
+#3 /home/max/server/student/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#4 /home/max/server/student/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/index.php?r=post/update&id=3
+---
